@@ -1,0 +1,2688 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Parse Attributes can parse anon-class attributes 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "a",
+        },
+        "operator": "=",
+        "right": New {
+          "arguments": [],
+          "kind": "new",
+          "what": Class {
+            "attrGroups": [
+              AttrGroup {
+                "attrs": [
+                  Attribute {
+                    "args": [],
+                    "kind": "attribute",
+                    "name": "T",
+                  },
+                ],
+                "kind": "attrgroup",
+              },
+            ],
+            "body": [],
+            "extends": null,
+            "implements": null,
+            "isAbstract": false,
+            "isAnonymous": true,
+            "isFinal": false,
+            "isReadonly": false,
+            "kind": "class",
+            "name": null,
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse anonymous function attributes 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "a",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [
+            AttrGroup {
+              "attrs": [
+                Attribute {
+                  "args": [],
+                  "kind": "attribute",
+                  "name": "Pure",
+                },
+              ],
+              "kind": "attrgroup",
+            },
+          ],
+          "body": Boolean {
+            "kind": "boolean",
+            "raw": "true",
+            "value": true,
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "arrowfunc",
+          "nullable": false,
+          "type": null,
+        },
+      },
+      "kind": "expressionstatement",
+    },
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "b",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [
+            AttrGroup {
+              "attrs": [
+                Attribute {
+                  "args": [],
+                  "kind": "attribute",
+                  "name": "A",
+                },
+              ],
+              "kind": "attrgroup",
+            },
+          ],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse attributes in inner statements 1`] = `
+Program {
+  "children": [
+    Namespace {
+      "children": [
+        _Function {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Return {
+                "expr": Closure {
+                  "arguments": [],
+                  "attrGroups": [
+                    AttrGroup {
+                      "attrs": [
+                        Attribute {
+                          "args": [],
+                          "kind": "attribute",
+                          "name": "C",
+                        },
+                      ],
+                      "kind": "attrgroup",
+                    },
+                  ],
+                  "body": Closure {
+                    "arguments": [],
+                    "attrGroups": [
+                      AttrGroup {
+                        "attrs": [
+                          Attribute {
+                            "args": [],
+                            "kind": "attribute",
+                            "name": "Pure",
+                          },
+                        ],
+                        "kind": "attrgroup",
+                      },
+                    ],
+                    "body": Block {
+                      "children": [],
+                      "kind": "block",
+                    },
+                    "byref": false,
+                    "isStatic": false,
+                    "kind": "closure",
+                    "nullable": false,
+                    "type": null,
+                    "uses": [],
+                  },
+                  "byref": false,
+                  "isStatic": false,
+                  "kind": "arrowfunc",
+                  "nullable": false,
+                  "type": null,
+                },
+                "kind": "return",
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "kind": "function",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "b",
+          },
+          "nullable": false,
+          "type": null,
+        },
+      ],
+      "kind": "namespace",
+      "name": "A",
+      "withBrackets": true,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse attributes with namespace 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [],
+      "attrGroups": [
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [],
+              "kind": "attribute",
+              "name": "\\JetBrains\\PhpStorm\\Pure",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+      ],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "b",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse class attributes 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [],
+              "kind": "attribute",
+              "name": "Deprecated",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                String {
+                  "isDoubleQuote": true,
+                  "kind": "string",
+                  "raw": ""use NewClass"",
+                  "unicode": false,
+                  "value": "use NewClass",
+                },
+              ],
+              "kind": "attribute",
+              "name": "replace",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+      ],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "DepClass",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse class const attributes 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        ClassConstant {
+          "attrGroups": [
+            AttrGroup {
+              "attrs": [
+                Attribute {
+                  "args": [],
+                  "kind": "attribute",
+                  "name": "B",
+                },
+              ],
+              "kind": "attrgroup",
+            },
+          ],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "B",
+              },
+              "value": Number {
+                "kind": "number",
+                "value": "1",
+              },
+            },
+          ],
+          "final": false,
+          "kind": "classconstant",
+          "visibility": "",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "A",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse class property attributes 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [
+                AttrGroup {
+                  "attrs": [
+                    Attribute {
+                      "args": [],
+                      "kind": "attribute",
+                      "name": "B",
+                    },
+                  ],
+                  "kind": "attrgroup",
+                },
+              ],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "b",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": Name {
+                "kind": "name",
+                "name": "B",
+                "resolution": "uqn",
+              },
+              "value": null,
+            },
+          ],
+          "visibility": "public",
+        },
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [
+                AttrGroup {
+                  "attrs": [
+                    Attribute {
+                      "args": [],
+                      "kind": "attribute",
+                      "name": "C",
+                    },
+                  ],
+                  "kind": "attrgroup",
+                },
+              ],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "c",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": Name {
+                "kind": "name",
+                "name": "C",
+                "resolution": "uqn",
+              },
+              "value": null,
+            },
+          ],
+          "visibility": "private",
+        },
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [
+                AttrGroup {
+                  "attrs": [
+                    Attribute {
+                      "args": [],
+                      "kind": "attribute",
+                      "name": "D",
+                    },
+                  ],
+                  "kind": "attrgroup",
+                },
+              ],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "d",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+          ],
+          "visibility": "protected",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "A",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse interface attributes 1`] = `
+Program {
+  "children": [
+    Interface {
+      "attrGroups": [
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [],
+              "kind": "attribute",
+              "name": "A",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+      ],
+      "body": [
+        ClassConstant {
+          "attrGroups": [
+            AttrGroup {
+              "attrs": [
+                Attribute {
+                  "args": [],
+                  "kind": "attribute",
+                  "name": "C",
+                },
+              ],
+              "kind": "attrgroup",
+            },
+          ],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "D",
+              },
+              "value": Number {
+                "kind": "number",
+                "value": "0",
+              },
+            },
+          ],
+          "final": false,
+          "kind": "classconstant",
+          "visibility": "",
+        },
+        Method {
+          "arguments": [],
+          "attrGroups": [
+            AttrGroup {
+              "attrs": [
+                Attribute {
+                  "args": [],
+                  "kind": "attribute",
+                  "name": "E",
+                },
+              ],
+              "kind": "attrgroup",
+            },
+          ],
+          "body": null,
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "f",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "kind": "interface",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "b",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse method attributes 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        Method {
+          "arguments": [],
+          "attrGroups": [
+            AttrGroup {
+              "attrs": [
+                Attribute {
+                  "args": [],
+                  "kind": "attribute",
+                  "name": "Pure",
+                },
+              ],
+              "kind": "attrgroup",
+            },
+          ],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "m",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Test",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse multi-line attributes 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [],
+              "kind": "attribute",
+              "name": "One",
+            },
+            Attribute {
+              "args": [],
+              "kind": "attribute",
+              "name": "Two",
+            },
+            Attribute {
+              "args": [],
+              "kind": "attribute",
+              "name": "Three",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [],
+              "kind": "attribute",
+              "name": "Four",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+      ],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Multi",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse param attributes 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [
+            AttrGroup {
+              "attrs": [
+                Attribute {
+                  "args": [],
+                  "kind": "attribute",
+                  "name": "Unsigned",
+                },
+              ],
+              "kind": "attrgroup",
+            },
+          ],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "n",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "int",
+            "raw": "int",
+          },
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "f",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse params with argument labels 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [],
+      "attrGroups": [
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                namedargument {
+                  "kind": "namedargument",
+                  "name": "value",
+                  "value": Number {
+                    "kind": "number",
+                    "value": "1234",
+                  },
+                },
+              ],
+              "kind": "attribute",
+              "name": "MyAttribute",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+      ],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "a",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse params with bitwise operations 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": "|",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att2",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att2",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": "&",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att2",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att3",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att3",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": "^",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att3",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Unary {
+                  "kind": "unary",
+                  "type": "~",
+                  "what": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att4",
+                      "resolution": "uqn",
+                    },
+                  },
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att4",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att5",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": Number {
+                    "kind": "number",
+                    "value": "1",
+                  },
+                  "type": ">>",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att5",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att6",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": Number {
+                    "kind": "number",
+                    "value": "1",
+                  },
+                  "type": "<<",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att6",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+      ],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "A",
+      },
+    },
+  ],
+  "comments": [],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse params with comments 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [
+            AttrGroup {
+              "attrs": [
+                Attribute {
+                  "args": [],
+                  "kind": "attribute",
+                  "name": "Unsigned",
+                },
+              ],
+              "kind": "attrgroup",
+            },
+          ],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "a",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": null,
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [],
+              "kind": "attribute",
+              "leadingComments": [
+                CommentBlock {
+                  "kind": "commentblock",
+                  "offset": 26,
+                  "value": "/* Pure */",
+                },
+              ],
+              "name": "Pure",
+            },
+          ],
+          "kind": "attrgroup",
+          "leadingComments": [
+            CommentLine {
+              "kind": "commentline",
+              "offset": 0,
+              "value": "// Line 1
+",
+            },
+          ],
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [],
+              "kind": "attribute",
+              "leadingComments": [
+                CommentLine {
+                  "kind": "commentline",
+                  "offset": 66,
+                  "value": "// Try using b
+",
+                },
+              ],
+              "name": "Deprecated",
+            },
+          ],
+          "kind": "attrgroup",
+          "leadingComments": [
+            CommentLine {
+              "kind": "commentline",
+              "offset": 43,
+              "value": "// Line 3
+",
+            },
+          ],
+        },
+      ],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "a",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "comments": [
+    CommentLine {
+      "kind": "commentline",
+      "offset": 0,
+      "value": "// Line 1
+",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 26,
+      "value": "/* Pure */",
+    },
+    CommentLine {
+      "kind": "commentline",
+      "offset": 43,
+      "value": "// Line 3
+",
+    },
+    CommentLine {
+      "kind": "commentline",
+      "offset": 66,
+      "value": "// Try using b
+",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse params with end characters 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Array {
+                  "items": [
+                    Entry {
+                      "byRef": false,
+                      "key": null,
+                      "kind": "entry",
+                      "unpack": false,
+                      "value": String {
+                        "isDoubleQuote": true,
+                        "kind": "string",
+                        "raw": ""])}>"",
+                        "unicode": false,
+                        "value": "])}>",
+                      },
+                    },
+                  ],
+                  "kind": "array",
+                  "shortForm": true,
+                },
+              ],
+              "kind": "attribute",
+              "name": "End",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+      ],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "End",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse params with logical operations 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": "||",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att2",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att2",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": "&&",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att2",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att3",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att3",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": "or",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att3",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att4",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att4",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": "and",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att4",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att5",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att5",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": "xor",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att5",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Unary {
+                  "kind": "unary",
+                  "type": "!",
+                  "what": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att6",
+                      "resolution": "uqn",
+                    },
+                  },
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att6",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+      ],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "A",
+      },
+    },
+  ],
+  "comments": [],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse params with mathematical expressions 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": Bin {
+                    "kind": "bin",
+                    "left": Bin {
+                      "kind": "bin",
+                      "left": Bin {
+                        "kind": "bin",
+                        "left": Unary {
+                          "kind": "unary",
+                          "type": "-",
+                          "what": Number {
+                            "kind": "number",
+                            "value": "20",
+                          },
+                        },
+                        "right": Bin {
+                          "kind": "bin",
+                          "left": Unary {
+                            "kind": "unary",
+                            "type": "+",
+                            "what": Number {
+                              "kind": "number",
+                              "value": "10",
+                            },
+                          },
+                          "parenthesizedExpression": true,
+                          "right": Number {
+                            "kind": "number",
+                            "value": "5",
+                          },
+                          "type": "/",
+                        },
+                        "type": "*",
+                      },
+                      "right": Number {
+                        "kind": "number",
+                        "value": "2",
+                      },
+                      "type": "%",
+                    },
+                    "right": Bin {
+                      "kind": "bin",
+                      "left": Number {
+                        "kind": "number",
+                        "value": "8",
+                      },
+                      "right": Number {
+                        "kind": "number",
+                        "value": "2",
+                      },
+                      "type": "**",
+                    },
+                    "type": "+",
+                  },
+                  "right": Unary {
+                    "kind": "unary",
+                    "type": "+",
+                    "what": Unary {
+                      "kind": "unary",
+                      "type": "-",
+                      "what": Number {
+                        "kind": "number",
+                        "value": "2",
+                      },
+                    },
+                  },
+                  "type": "-",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+      ],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "A",
+      },
+    },
+  ],
+  "comments": [],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse params with string concatenation 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""a"",
+                    "unicode": false,
+                    "value": "a",
+                  },
+                  "right": String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""b"",
+                    "unicode": false,
+                    "value": "b",
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att2",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""a"",
+                    "unicode": false,
+                    "value": "a",
+                  },
+                  "right": String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""b"",
+                    "unicode": false,
+                    "value": "b",
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att2",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": String {
+                    "isDoubleQuote": false,
+                    "kind": "string",
+                    "raw": "'a'",
+                    "unicode": false,
+                    "value": "a",
+                  },
+                  "right": String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""b"",
+                    "unicode": false,
+                    "value": "b",
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att2",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": String {
+                    "isDoubleQuote": false,
+                    "kind": "string",
+                    "raw": "'a'",
+                    "unicode": false,
+                    "value": "a",
+                  },
+                  "right": String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""b"",
+                    "unicode": false,
+                    "value": "b",
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att2",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""a"",
+                    "unicode": false,
+                    "value": "a",
+                  },
+                  "right": String {
+                    "isDoubleQuote": false,
+                    "kind": "string",
+                    "raw": "'b'",
+                    "unicode": false,
+                    "value": "b",
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att2",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""a"",
+                    "unicode": false,
+                    "value": "a",
+                  },
+                  "right": String {
+                    "isDoubleQuote": false,
+                    "kind": "string",
+                    "raw": "'b'",
+                    "unicode": false,
+                    "value": "b",
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att2",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": String {
+                    "isDoubleQuote": false,
+                    "kind": "string",
+                    "raw": "'a'",
+                    "unicode": false,
+                    "value": "a",
+                  },
+                  "right": String {
+                    "isDoubleQuote": false,
+                    "kind": "string",
+                    "raw": "'b'",
+                    "unicode": false,
+                    "value": "b",
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att2",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": String {
+                    "isDoubleQuote": false,
+                    "kind": "string",
+                    "raw": "'a'",
+                    "unicode": false,
+                    "value": "a",
+                  },
+                  "right": String {
+                    "isDoubleQuote": false,
+                    "kind": "string",
+                    "raw": "'b'",
+                    "unicode": false,
+                    "value": "b",
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att2",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""b"",
+                    "unicode": false,
+                    "value": "b",
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""b"",
+                    "unicode": false,
+                    "value": "b",
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": String {
+                    "isDoubleQuote": false,
+                    "kind": "string",
+                    "raw": "'b'",
+                    "unicode": false,
+                    "value": "b",
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": String {
+                    "isDoubleQuote": false,
+                    "kind": "string",
+                    "raw": "'b'",
+                    "unicode": false,
+                    "value": "b",
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""a"",
+                    "unicode": false,
+                    "value": "a",
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""a"",
+                    "unicode": false,
+                    "value": "a",
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": String {
+                    "isDoubleQuote": false,
+                    "kind": "string",
+                    "raw": "'a'",
+                    "unicode": false,
+                    "value": "a",
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": String {
+                    "isDoubleQuote": false,
+                    "kind": "string",
+                    "raw": "'a'",
+                    "unicode": false,
+                    "value": "a",
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Bin {
+                  "kind": "bin",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "FOO",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "right": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "BAR",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "Att1",
+                      "resolution": "uqn",
+                    },
+                  },
+                  "type": ".",
+                },
+              ],
+              "kind": "attribute",
+              "name": "Att1",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+      ],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "A",
+      },
+    },
+  ],
+  "comments": [],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes can parse parms with array values 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [],
+      "attrGroups": [
+        AttrGroup {
+          "attrs": [
+            Attribute {
+              "args": [
+                Array {
+                  "items": [
+                    Entry {
+                      "byRef": false,
+                      "key": String {
+                        "isDoubleQuote": true,
+                        "kind": "string",
+                        "raw": ""a"",
+                        "unicode": false,
+                        "value": "a",
+                      },
+                      "kind": "entry",
+                      "unpack": false,
+                      "value": Number {
+                        "kind": "number",
+                        "value": "1",
+                      },
+                    },
+                    Entry {
+                      "byRef": false,
+                      "key": String {
+                        "isDoubleQuote": false,
+                        "kind": "string",
+                        "raw": "'b'",
+                        "unicode": false,
+                        "value": "b",
+                      },
+                      "kind": "entry",
+                      "unpack": false,
+                      "value": StaticLookup {
+                        "kind": "staticlookup",
+                        "offset": Identifier {
+                          "kind": "identifier",
+                          "name": "class",
+                        },
+                        "what": Name {
+                          "kind": "name",
+                          "name": "Test",
+                          "resolution": "uqn",
+                        },
+                      },
+                    },
+                    Entry {
+                      "byRef": false,
+                      "key": String {
+                        "isDoubleQuote": false,
+                        "kind": "string",
+                        "raw": "'c'",
+                        "unicode": false,
+                        "value": "c",
+                      },
+                      "kind": "entry",
+                      "unpack": false,
+                      "value": Array {
+                        "items": [],
+                        "kind": "array",
+                        "shortForm": true,
+                      },
+                    },
+                  ],
+                  "kind": "array",
+                  "shortForm": true,
+                },
+              ],
+              "kind": "attribute",
+              "name": "List",
+            },
+          ],
+          "kind": "attrgroup",
+        },
+      ],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "a",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes doesnt parse attributes for assignments 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "a",
+        },
+        "operator": "=",
+        "right": Number {
+          "kind": "number",
+          "value": "1",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "comments": [],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes doesnt repeat attributes from previous function 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        Method {
+          "arguments": [],
+          "attrGroups": [
+            AttrGroup {
+              "attrs": [
+                Attribute {
+                  "args": [],
+                  "kind": "attribute",
+                  "name": "Att1",
+                },
+              ],
+              "kind": "attrgroup",
+            },
+          ],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "b",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "",
+        },
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "c",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "",
+        },
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "d",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "a",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes parses attributes as comments for PHP < 8 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "leadingComments": [
+            CommentLine {
+              "kind": "commentline",
+              "offset": 45,
+              "value": "#[Att2]
+",
+            },
+          ],
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "b",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "leadingComments": [
+        CommentLine {
+          "kind": "commentline",
+          "offset": 9,
+          "value": "#[Att1]
+",
+        },
+      ],
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "a",
+      },
+    },
+  ],
+  "comments": [
+    CommentLine {
+      "kind": "commentline",
+      "offset": 9,
+      "value": "#[Att1]
+",
+    },
+    CommentLine {
+      "kind": "commentline",
+      "offset": 45,
+      "value": "#[Att2]
+",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Parse Attributes parses this complicated edge case 1`] = `
+Program {
+  "children": [
+    UseGroup {
+      "items": [
+        UseItem {
+          "alias": Identifier {
+            "kind": "identifier",
+            "name": "Assert",
+          },
+          "kind": "useitem",
+          "name": "Symfony\\Component\\Validator\\Constraints",
+          "type": null,
+        },
+      ],
+      "kind": "usegroup",
+      "name": null,
+      "type": null,
+    },
+    Class {
+      "attrGroups": [],
+      "body": [
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [
+                AttrGroup {
+                  "attrs": [
+                    Attribute {
+                      "args": [
+                        namedargument {
+                          "kind": "namedargument",
+                          "name": "allowNull",
+                          "value": Boolean {
+                            "kind": "boolean",
+                            "raw": "false",
+                            "value": false,
+                          },
+                        },
+                        namedargument {
+                          "kind": "namedargument",
+                          "name": "groups",
+                          "value": Array {
+                            "items": [
+                              Entry {
+                                "byRef": false,
+                                "key": null,
+                                "kind": "entry",
+                                "unpack": false,
+                                "value": String {
+                                  "isDoubleQuote": false,
+                                  "kind": "string",
+                                  "raw": "'foo'",
+                                  "unicode": false,
+                                  "value": "foo",
+                                },
+                              },
+                            ],
+                            "kind": "array",
+                            "shortForm": true,
+                          },
+                        },
+                      ],
+                      "kind": "attribute",
+                      "name": "Assert\\NotBlank",
+                    },
+                    Attribute {
+                      "args": [
+                        namedargument {
+                          "kind": "namedargument",
+                          "name": "max",
+                          "value": Number {
+                            "kind": "number",
+                            "value": "255",
+                          },
+                        },
+                        namedargument {
+                          "kind": "namedargument",
+                          "name": "groups",
+                          "value": Array {
+                            "items": [
+                              Entry {
+                                "byRef": false,
+                                "key": null,
+                                "kind": "entry",
+                                "unpack": false,
+                                "value": String {
+                                  "isDoubleQuote": false,
+                                  "kind": "string",
+                                  "raw": "'foo'",
+                                  "unicode": false,
+                                  "value": "foo",
+                                },
+                              },
+                            ],
+                            "kind": "array",
+                            "shortForm": true,
+                          },
+                        },
+                      ],
+                      "kind": "attribute",
+                      "name": "Assert\\Length",
+                    },
+                  ],
+                  "kind": "attrgroup",
+                },
+              ],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "value",
+              },
+              "nullable": true,
+              "readonly": false,
+              "type": TypeReference {
+                "kind": "typereference",
+                "name": "string",
+                "raw": "string",
+              },
+              "value": NullKeyword {
+                "kind": "nullkeyword",
+                "raw": "null",
+              },
+            },
+          ],
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "ValueModel",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

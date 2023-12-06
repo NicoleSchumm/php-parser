@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`propertystatement multiple (var) 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "dsn",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "username",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "password",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+          ],
+          "visibility": null,
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`propertystatement multiple 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "dsn",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "username",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "password",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+          ],
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`propertystatement simple (var) 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "dsn",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+          ],
+          "visibility": null,
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`propertystatement simple 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "dsn",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+          ],
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

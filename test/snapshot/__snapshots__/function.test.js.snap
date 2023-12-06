@@ -1,0 +1,1786 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Function tests Test readonly function properties are only for class constructor 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 1,
+          "kind": "parameter",
+          "name": null,
+          "nullable": false,
+          "readonly": false,
+          "type": null,
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": null,
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "fun",
+      },
+      "nullable": false,
+      "type": null,
+    },
+    ExpressionStatement {
+      "expression": Variable {
+        "curly": false,
+        "kind": "variable",
+        "name": "id",
+      },
+      "kind": "expressionstatement",
+    },
+    ExpressionStatement {
+      "expression": undefined,
+      "kind": "expressionstatement",
+    },
+    Block {
+      "children": [],
+      "kind": "block",
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": undefined,
+      "kind": "error",
+      "line": 2,
+      "message": "readonly properties can be used only on class constructor on line 2",
+      "token": undefined,
+    },
+    Error {
+      "expected": 222,
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected 'readonly' (T_READ_ONLY), expecting T_VARIABLE on line 2",
+      "token": "'readonly' (T_READ_ONLY)",
+    },
+    Error {
+      "expected": [
+        ",",
+        ")",
+      ],
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected 'readonly' (T_READ_ONLY) on line 2",
+      "token": "'readonly' (T_READ_ONLY)",
+    },
+    Error {
+      "expected": ")",
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected 'readonly' (T_READ_ONLY), expecting ')' on line 2",
+      "token": "'readonly' (T_READ_ONLY)",
+    },
+    Error {
+      "expected": "{",
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected 'readonly' (T_READ_ONLY), expecting '{' on line 2",
+      "token": "'readonly' (T_READ_ONLY)",
+    },
+    Error {
+      "expected": 187,
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected 'int' (T_STRING), expecting T_CLASS on line 2",
+      "token": "'int' (T_STRING)",
+    },
+    Error {
+      "expected": ";",
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected ')', expecting ';' on line 2",
+      "token": "')'",
+    },
+    Error {
+      "expected": "EXPR",
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected ')' on line 2",
+      "token": "')'",
+    },
+    Error {
+      "expected": ";",
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected '{', expecting ';' on line 2",
+      "token": "'{'",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests array pass by reference are not confused with intersection 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": true,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "params",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "array",
+            "raw": "array",
+          },
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests first class callable support 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "callable",
+        },
+        "operator": "=",
+        "right": Call {
+          "arguments": [
+            VariadicPlaceholder {
+              "kind": "variadicplaceholder",
+            },
+          ],
+          "kind": "call",
+          "what": Name {
+            "kind": "name",
+            "name": "strlen",
+            "resolution": "uqn",
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "callable",
+        },
+        "operator": "=",
+        "right": Call {
+          "arguments": [
+            VariadicPlaceholder {
+              "kind": "variadicplaceholder",
+            },
+          ],
+          "kind": "call",
+          "what": PropertyLookup {
+            "kind": "propertylookup",
+            "offset": Identifier {
+              "kind": "identifier",
+              "name": "doSomething",
+            },
+            "what": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "item",
+            },
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "callable",
+        },
+        "operator": "=",
+        "right": Call {
+          "arguments": [
+            VariadicPlaceholder {
+              "kind": "variadicplaceholder",
+            },
+          ],
+          "kind": "call",
+          "what": StaticLookup {
+            "kind": "staticlookup",
+            "offset": Identifier {
+              "kind": "identifier",
+              "name": "doSomething",
+            },
+            "what": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "item",
+            },
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "callable",
+        },
+        "operator": "=",
+        "right": Call {
+          "arguments": [
+            VariadicPlaceholder {
+              "kind": "variadicplaceholder",
+            },
+          ],
+          "kind": "call",
+          "what": StaticLookup {
+            "kind": "staticlookup",
+            "offset": Identifier {
+              "kind": "identifier",
+              "name": "doSomething",
+            },
+            "what": Name {
+              "kind": "name",
+              "name": "Foo",
+              "resolution": "uqn",
+            },
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests first class callable support requires PHP 8.1+ 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "callable",
+        },
+        "operator": "=",
+        "right": Call {
+          "arguments": [
+            variadic {
+              "kind": "variadic",
+              "what": undefined,
+            },
+          ],
+          "kind": "call",
+          "what": Name {
+            "kind": "name",
+            "name": "strlen",
+            "resolution": "uqn",
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": "EXPR",
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected ')' on line 2",
+      "token": "')'",
+    },
+    Error {
+      "expected": ")",
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected ';', expecting ')' on line 2",
+      "token": "';'",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests implement #113 : typehint nodes 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "a",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "int",
+            "raw": "int",
+          },
+          "value": Number {
+            "kind": "number",
+            "value": "1",
+          },
+          "variadic": false,
+        },
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "b",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "float",
+            "raw": "float",
+          },
+          "value": Number {
+            "kind": "number",
+            "value": "1",
+          },
+          "variadic": false,
+        },
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "c",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "bool",
+            "raw": "bool",
+          },
+          "value": Number {
+            "kind": "number",
+            "value": "1",
+          },
+          "variadic": false,
+        },
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "d",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "string",
+            "raw": "string",
+          },
+          "value": null,
+          "variadic": false,
+        },
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "e",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "callable",
+            "raw": "callable",
+          },
+          "value": null,
+          "variadic": false,
+        },
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "f",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": Name {
+            "kind": "name",
+            "name": "int\\bar",
+            "resolution": "qn",
+          },
+          "value": null,
+          "variadic": false,
+        },
+        Parameter {
+          "attrGroups": [],
+          "byref": true,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "params",
+          },
+          "nullable": true,
+          "readonly": false,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "array",
+            "raw": "array",
+          },
+          "value": null,
+          "variadic": true,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": true,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": true,
+      "type": TypeReference {
+        "kind": "typereference",
+        "name": "object",
+        "raw": "object",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests implement #196 : set function name as identifier 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "leadingComments": [
+            CommentBlock {
+              "kind": "commentblock",
+              "offset": 18,
+              "value": "/* f */",
+            },
+          ],
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "a",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": null,
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "f",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 18,
+      "value": "/* f */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests spread array pass by reference are not intersection 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": true,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "params",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "array",
+            "raw": "array",
+          },
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": true,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test arrow function php 7.4 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": false,
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test danging comma in closure use-block php 8.0 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "test",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "one",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test danging comma in closure use-block with multiple php 8.0 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "test",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "one",
+            },
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "two",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test danging comma in closure use-block with multiple/refs php 8.0 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "test",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "one",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "two",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "three",
+            },
+            Variable {
+              "byref": true,
+              "curly": false,
+              "kind": "variable",
+              "name": "four",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test danging comma in closure use-block with refs php 8.0 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "test",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [
+            Variable {
+              "byref": true,
+              "curly": false,
+              "kind": "variable",
+              "name": "one",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test danging comma in function php 8.0 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "a",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": null,
+          "value": null,
+          "variadic": false,
+        },
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "b",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": null,
+          "value": null,
+          "variadic": false,
+        },
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "c",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": null,
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": false,
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test double danging comma in closure use-block php 8.0 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "test",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "one",
+            },
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": 222,
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected ',', expecting T_VARIABLE on line 1",
+      "token": "','",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test function intersection types 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "a",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": IntersectionType {
+            "kind": "intersectiontype",
+            "name": null,
+            "types": [
+              TypeReference {
+                "kind": "typereference",
+                "name": "int",
+                "raw": "int",
+              },
+              TypeReference {
+                "kind": "typereference",
+                "name": "float",
+                "raw": "float",
+              },
+            ],
+          },
+          "value": Number {
+            "kind": "number",
+            "value": "1",
+          },
+          "variadic": false,
+        },
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "b",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": IntersectionType {
+            "kind": "intersectiontype",
+            "name": null,
+            "types": [
+              Name {
+                "kind": "name",
+                "name": "Foo",
+                "resolution": "uqn",
+              },
+              Name {
+                "kind": "name",
+                "name": "Bar",
+                "resolution": "uqn",
+              },
+            ],
+          },
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": false,
+      "type": IntersectionType {
+        "kind": "intersectiontype",
+        "name": null,
+        "types": [
+          TypeReference {
+            "kind": "typereference",
+            "name": "string",
+            "raw": "string",
+          },
+          TypeReference {
+            "kind": "typereference",
+            "name": "int",
+            "raw": "int",
+          },
+        ],
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test function parsing 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "a",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": null,
+          "value": Number {
+            "kind": "number",
+            "value": "1",
+          },
+          "variadic": false,
+        },
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "b",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "callable",
+            "raw": "callable",
+          },
+          "value": null,
+          "variadic": false,
+        },
+        Parameter {
+          "attrGroups": [],
+          "byref": true,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "params",
+          },
+          "nullable": true,
+          "readonly": false,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "array",
+            "raw": "array",
+          },
+          "value": null,
+          "variadic": true,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": true,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": true,
+      "type": Name {
+        "kind": "name",
+        "name": "boolean",
+        "resolution": "uqn",
+      },
+    },
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "a",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "b",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Return {
+                "expr": Boolean {
+                  "kind": "boolean",
+                  "raw": "true",
+                  "value": true,
+                },
+                "kind": "return",
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": true,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "array",
+            "raw": "array",
+          },
+          "uses": [
+            Variable {
+              "byref": true,
+              "curly": false,
+              "kind": "variable",
+              "name": "c",
+            },
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "d",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "b",
+        },
+        "operator": "=",
+        "right": Call {
+          "arguments": [
+            variadic {
+              "kind": "variadic",
+              "what": Array {
+                "items": [
+                  Entry {
+                    "byRef": false,
+                    "key": null,
+                    "kind": "entry",
+                    "unpack": false,
+                    "value": Number {
+                      "kind": "number",
+                      "value": "1",
+                    },
+                  },
+                  Entry {
+                    "byRef": false,
+                    "key": null,
+                    "kind": "entry",
+                    "unpack": false,
+                    "value": NullKeyword {
+                      "kind": "nullkeyword",
+                      "raw": "null",
+                    },
+                  },
+                  Entry {
+                    "byRef": false,
+                    "key": null,
+                    "kind": "entry",
+                    "unpack": false,
+                    "value": Number {
+                      "kind": "number",
+                      "value": "1",
+                    },
+                  },
+                  Entry {
+                    "byRef": false,
+                    "key": null,
+                    "kind": "entry",
+                    "unpack": false,
+                    "value": Number {
+                      "kind": "number",
+                      "value": "2",
+                    },
+                  },
+                  Entry {
+                    "byRef": false,
+                    "key": null,
+                    "kind": "entry",
+                    "unpack": false,
+                    "value": Number {
+                      "kind": "number",
+                      "value": "3",
+                    },
+                  },
+                ],
+                "kind": "array",
+                "shortForm": true,
+              },
+            },
+          ],
+          "kind": "call",
+          "what": Name {
+            "kind": "name",
+            "name": "foo",
+            "resolution": "uqn",
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test function union types 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "a",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": UnionType {
+            "kind": "uniontype",
+            "name": null,
+            "types": [
+              TypeReference {
+                "kind": "typereference",
+                "name": "int",
+                "raw": "int",
+              },
+              TypeReference {
+                "kind": "typereference",
+                "name": "float",
+                "raw": "float",
+              },
+            ],
+          },
+          "value": Number {
+            "kind": "number",
+            "value": "1",
+          },
+          "variadic": false,
+        },
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "b",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": UnionType {
+            "kind": "uniontype",
+            "name": null,
+            "types": [
+              Name {
+                "kind": "name",
+                "name": "Foo",
+                "resolution": "uqn",
+              },
+              Name {
+                "kind": "name",
+                "name": "Bar",
+                "resolution": "uqn",
+              },
+            ],
+          },
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": false,
+      "type": UnionType {
+        "kind": "uniontype",
+        "name": null,
+        "types": [
+          TypeReference {
+            "kind": "typereference",
+            "name": "string",
+            "raw": "string",
+          },
+          TypeReference {
+            "kind": "typereference",
+            "name": "int",
+            "raw": "int",
+          },
+        ],
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test reserved word for function name error 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": false,
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": 105,
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected 'list' (T_LIST), expecting T_STRING on line 1",
+      "token": "'list' (T_LIST)",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test short function intersection types 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Closure {
+        "arguments": [
+          Parameter {
+            "attrGroups": [],
+            "byref": false,
+            "flags": 0,
+            "kind": "parameter",
+            "name": Identifier {
+              "kind": "identifier",
+              "name": "a",
+            },
+            "nullable": false,
+            "readonly": false,
+            "type": IntersectionType {
+              "kind": "intersectiontype",
+              "name": null,
+              "types": [
+                TypeReference {
+                  "kind": "typereference",
+                  "name": "int",
+                  "raw": "int",
+                },
+                TypeReference {
+                  "kind": "typereference",
+                  "name": "float",
+                  "raw": "float",
+                },
+              ],
+            },
+            "value": Number {
+              "kind": "number",
+              "value": "1",
+            },
+            "variadic": false,
+          },
+          Parameter {
+            "attrGroups": [],
+            "byref": false,
+            "flags": 0,
+            "kind": "parameter",
+            "name": Identifier {
+              "kind": "identifier",
+              "name": "b",
+            },
+            "nullable": false,
+            "readonly": false,
+            "type": IntersectionType {
+              "kind": "intersectiontype",
+              "name": null,
+              "types": [
+                Name {
+                  "kind": "name",
+                  "name": "Foo",
+                  "resolution": "uqn",
+                },
+                Name {
+                  "kind": "name",
+                  "name": "Bar",
+                  "resolution": "uqn",
+                },
+              ],
+            },
+            "value": null,
+            "variadic": false,
+          },
+        ],
+        "attrGroups": [],
+        "body": String {
+          "isDoubleQuote": true,
+          "kind": "string",
+          "raw": """",
+          "unicode": false,
+          "value": "",
+        },
+        "byref": false,
+        "isStatic": false,
+        "kind": "arrowfunc",
+        "nullable": false,
+        "type": IntersectionType {
+          "kind": "intersectiontype",
+          "name": null,
+          "types": [
+            TypeReference {
+              "kind": "typereference",
+              "name": "string",
+              "raw": "string",
+            },
+            TypeReference {
+              "kind": "typereference",
+              "name": "int",
+              "raw": "int",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test short function union types 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Closure {
+        "arguments": [
+          Parameter {
+            "attrGroups": [],
+            "byref": false,
+            "flags": 0,
+            "kind": "parameter",
+            "name": Identifier {
+              "kind": "identifier",
+              "name": "a",
+            },
+            "nullable": false,
+            "readonly": false,
+            "type": UnionType {
+              "kind": "uniontype",
+              "name": null,
+              "types": [
+                TypeReference {
+                  "kind": "typereference",
+                  "name": "int",
+                  "raw": "int",
+                },
+                TypeReference {
+                  "kind": "typereference",
+                  "name": "float",
+                  "raw": "float",
+                },
+              ],
+            },
+            "value": Number {
+              "kind": "number",
+              "value": "1",
+            },
+            "variadic": false,
+          },
+          Parameter {
+            "attrGroups": [],
+            "byref": false,
+            "flags": 0,
+            "kind": "parameter",
+            "name": Identifier {
+              "kind": "identifier",
+              "name": "b",
+            },
+            "nullable": false,
+            "readonly": false,
+            "type": UnionType {
+              "kind": "uniontype",
+              "name": null,
+              "types": [
+                Name {
+                  "kind": "name",
+                  "name": "Foo",
+                  "resolution": "uqn",
+                },
+                Name {
+                  "kind": "name",
+                  "name": "Bar",
+                  "resolution": "uqn",
+                },
+              ],
+            },
+            "value": null,
+            "variadic": false,
+          },
+        ],
+        "attrGroups": [],
+        "body": String {
+          "isDoubleQuote": true,
+          "kind": "string",
+          "raw": """",
+          "unicode": false,
+          "value": "",
+        },
+        "byref": false,
+        "isStatic": false,
+        "kind": "arrowfunc",
+        "nullable": false,
+        "type": UnionType {
+          "kind": "uniontype",
+          "name": null,
+          "types": [
+            TypeReference {
+              "kind": "typereference",
+              "name": "string",
+              "raw": "string",
+            },
+            TypeReference {
+              "kind": "typereference",
+              "name": "int",
+              "raw": "int",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test static closure 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "a",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": true,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test variadic call error 1`] = `"Unexpected non-variadic argument after a variadic argument on line 1"`;
+
+exports[`Function tests test variadic function error 1 1`] = `"Unexpected parameter after a variadic parameter on line 1"`;
+
+exports[`Function tests test variadic function error 2 1`] = `"Unexpected parameter after a variadic parameter on line 1"`;
+
+exports[`Function tests test without danging comma in closure use-block php 8.0 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "test",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "one",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Function tests test without danging comma in closure use-block with refs php 8.0 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "test",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [
+            Variable {
+              "byref": true,
+              "curly": false,
+              "kind": "variable",
+              "name": "one",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

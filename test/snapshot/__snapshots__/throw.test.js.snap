@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`throw arrow function 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "fn",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Throw {
+            "kind": "throw",
+            "what": New {
+              "arguments": [
+                String {
+                  "isDoubleQuote": true,
+                  "kind": "string",
+                  "raw": ""oops"",
+                  "unicode": false,
+                  "value": "oops",
+                },
+              ],
+              "kind": "new",
+              "what": Name {
+                "kind": "name",
+                "name": "Exception",
+                "resolution": "uqn",
+              },
+            },
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "arrowfunc",
+          "nullable": false,
+          "type": null,
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`throw simple 1`] = `
+Program {
+  "children": [
+    Throw {
+      "kind": "throw",
+      "what": New {
+        "arguments": [
+          String {
+            "isDoubleQuote": true,
+            "kind": "string",
+            "raw": ""Error"",
+            "unicode": false,
+            "value": "Error",
+          },
+        ],
+        "kind": "new",
+        "what": Name {
+          "kind": "name",
+          "name": "Exception",
+          "resolution": "uqn",
+        },
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

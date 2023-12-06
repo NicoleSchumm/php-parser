@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`classconstant final 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        ClassConstant {
+          "attrGroups": [],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "CONSTANT",
+              },
+              "value": String {
+                "isDoubleQuote": true,
+                "kind": "string",
+                "raw": ""Hello world!"",
+                "unicode": false,
+                "value": "Hello world!",
+              },
+            },
+          ],
+          "final": true,
+          "kind": "classconstant",
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`classconstant multiple 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        ClassConstant {
+          "attrGroups": [],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "CONSTANT",
+              },
+              "value": String {
+                "isDoubleQuote": true,
+                "kind": "string",
+                "raw": ""Hello world!"",
+                "unicode": false,
+                "value": "Hello world!",
+              },
+            },
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "OTHER_CONSTANT",
+              },
+              "value": String {
+                "isDoubleQuote": true,
+                "kind": "string",
+                "raw": ""Other hello world!"",
+                "unicode": false,
+                "value": "Other hello world!",
+              },
+            },
+          ],
+          "final": false,
+          "kind": "classconstant",
+          "visibility": "",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`classconstant private 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        ClassConstant {
+          "attrGroups": [],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "CONSTANT",
+              },
+              "value": String {
+                "isDoubleQuote": true,
+                "kind": "string",
+                "raw": ""Hello world!"",
+                "unicode": false,
+                "value": "Hello world!",
+              },
+            },
+          ],
+          "final": false,
+          "kind": "classconstant",
+          "visibility": "private",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`classconstant protected 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        ClassConstant {
+          "attrGroups": [],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "CONSTANT",
+              },
+              "value": String {
+                "isDoubleQuote": true,
+                "kind": "string",
+                "raw": ""Hello world!"",
+                "unicode": false,
+                "value": "Hello world!",
+              },
+            },
+          ],
+          "final": false,
+          "kind": "classconstant",
+          "visibility": "protected",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`classconstant public 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        ClassConstant {
+          "attrGroups": [],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "CONSTANT",
+              },
+              "value": String {
+                "isDoubleQuote": true,
+                "kind": "string",
+                "raw": ""Hello world!"",
+                "unicode": false,
+                "value": "Hello world!",
+              },
+            },
+          ],
+          "final": false,
+          "kind": "classconstant",
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`classconstant simple 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        ClassConstant {
+          "attrGroups": [],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "CONSTANT",
+              },
+              "value": String {
+                "isDoubleQuote": true,
+                "kind": "string",
+                "raw": ""Hello world!"",
+                "unicode": false,
+                "value": "Hello world!",
+              },
+            },
+          ],
+          "final": false,
+          "kind": "classconstant",
+          "visibility": "",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

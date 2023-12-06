@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`goto simple 1`] = `
+Program {
+  "children": [
+    Goto {
+      "kind": "goto",
+      "label": Identifier {
+        "kind": "identifier",
+        "name": "a",
+      },
+    },
+    Echo {
+      "expressions": [
+        String {
+          "isDoubleQuote": true,
+          "kind": "string",
+          "raw": ""Foo"",
+          "unicode": false,
+          "value": "Foo",
+        },
+      ],
+      "kind": "echo",
+      "shortForm": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`goto simple 2`] = `
+Program {
+  "children": [
+    Goto {
+      "kind": "goto",
+      "label": Identifier {
+        "kind": "identifier",
+        "name": "longName",
+      },
+    },
+    Echo {
+      "expressions": [
+        String {
+          "isDoubleQuote": true,
+          "kind": "string",
+          "raw": ""Foo"",
+          "unicode": false,
+          "value": "Foo",
+        },
+      ],
+      "kind": "echo",
+      "shortForm": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

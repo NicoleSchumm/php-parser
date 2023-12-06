@@ -1,0 +1,729 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`closure argument 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Echo {
+                "expressions": [
+                  String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""something"",
+                    "unicode": false,
+                    "value": "something",
+                  },
+                ],
+                "kind": "echo",
+                "shortForm": false,
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`closure argument and use 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Echo {
+                "expressions": [
+                  String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""something"",
+                    "unicode": false,
+                    "value": "something",
+                  },
+                ],
+                "kind": "echo",
+                "shortForm": false,
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "use",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`closure argument by ref 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": true,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Echo {
+                "expressions": [
+                  String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""something"",
+                    "unicode": false,
+                    "value": "something",
+                  },
+                ],
+                "kind": "echo",
+                "shortForm": false,
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`closure arguments 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Echo {
+                "expressions": [
+                  String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""something"",
+                    "unicode": false,
+                    "value": "something",
+                  },
+                ],
+                "kind": "echo",
+                "shortForm": false,
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`closure arguments and uses 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Echo {
+                "expressions": [
+                  String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""something"",
+                    "unicode": false,
+                    "value": "something",
+                  },
+                ],
+                "kind": "echo",
+                "shortForm": false,
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "use",
+            },
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "use",
+            },
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "use",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`closure empty 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`closure inside call 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Call {
+        "arguments": [
+          Closure {
+            "arguments": [
+              Parameter {
+                "attrGroups": [],
+                "byref": false,
+                "flags": 0,
+                "kind": "parameter",
+                "name": Identifier {
+                  "kind": "identifier",
+                  "name": "arg",
+                },
+                "nullable": false,
+                "readonly": false,
+                "type": null,
+                "value": null,
+                "variadic": false,
+              },
+            ],
+            "attrGroups": [],
+            "body": Block {
+              "children": [
+                Return {
+                  "expr": Variable {
+                    "curly": false,
+                    "kind": "variable",
+                    "name": "arg",
+                  },
+                  "kind": "return",
+                },
+              ],
+              "kind": "block",
+            },
+            "byref": false,
+            "isStatic": false,
+            "kind": "closure",
+            "nullable": false,
+            "type": null,
+            "uses": [],
+          },
+        ],
+        "kind": "call",
+        "what": Name {
+          "kind": "name",
+          "name": "call",
+          "resolution": "uqn",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`closure simple 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Echo {
+                "expressions": [
+                  String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""something"",
+                    "unicode": false,
+                    "value": "something",
+                  },
+                ],
+                "kind": "echo",
+                "shortForm": false,
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`closure use 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Echo {
+                "expressions": [
+                  String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""something"",
+                    "unicode": false,
+                    "value": "something",
+                  },
+                ],
+                "kind": "echo",
+                "shortForm": false,
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "message",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`closure use by ref 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Echo {
+                "expressions": [
+                  String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""something"",
+                    "unicode": false,
+                    "value": "something",
+                  },
+                ],
+                "kind": "echo",
+                "shortForm": false,
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [
+            Variable {
+              "byref": true,
+              "curly": false,
+              "kind": "variable",
+              "name": "message",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`closure use multiple 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Echo {
+                "expressions": [
+                  String {
+                    "isDoubleQuote": true,
+                    "kind": "string",
+                    "raw": ""something"",
+                    "unicode": false,
+                    "value": "something",
+                  },
+                ],
+                "kind": "echo",
+                "shortForm": false,
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "closure",
+          "nullable": false,
+          "type": null,
+          "uses": [
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "message",
+            },
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "message1",
+            },
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "message2",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

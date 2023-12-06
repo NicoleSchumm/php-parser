@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`silent simple 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Silent {
+        "expr": Call {
+          "arguments": [],
+          "kind": "call",
+          "what": Name {
+            "kind": "name",
+            "name": "call",
+            "resolution": "uqn",
+          },
+        },
+        "kind": "silent",
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

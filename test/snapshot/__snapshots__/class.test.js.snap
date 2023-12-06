@@ -1,0 +1,2071 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test classes Advanced tests 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        TraitUse {
+          "adaptations": null,
+          "kind": "traituse",
+          "traits": [
+            Name {
+              "kind": "name",
+              "name": "A",
+              "resolution": "uqn",
+            },
+          ],
+        },
+        TraitUse {
+          "adaptations": [
+            TraitAlias {
+              "as": Identifier {
+                "kind": "identifier",
+                "name": "bar",
+              },
+              "kind": "traitalias",
+              "method": "foo",
+              "trait": null,
+              "visibility": "",
+            },
+          ],
+          "kind": "traituse",
+          "traits": [
+            Name {
+              "kind": "name",
+              "name": "B",
+              "resolution": "uqn",
+            },
+          ],
+        },
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "leadingComments": [
+            CommentLine {
+              "kind": "commentline",
+              "offset": 87,
+              "value": "// comment
+",
+            },
+            CommentBlock {
+              "kind": "commentblock",
+              "offset": 106,
+              "value": "/* boo */",
+            },
+            CommentBlock {
+              "kind": "commentblock",
+              "offset": 124,
+              "value": "/** doc
+         * data
+           foo
+         */",
+            },
+          ],
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "var",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": Boolean {
+                "kind": "boolean",
+                "raw": "true",
+                "value": true,
+              },
+            },
+          ],
+          "visibility": null,
+        },
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": true,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "__construct",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "",
+        },
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "boo",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "private",
+        },
+      ],
+      "extends": null,
+      "implements": [
+        Name {
+          "kind": "name",
+          "name": "boo",
+          "resolution": "uqn",
+        },
+      ],
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+    },
+    Interface {
+      "attrGroups": [],
+      "body": [
+        ClassConstant {
+          "attrGroups": [],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "A",
+              },
+              "value": Number {
+                "kind": "number",
+                "value": "1.5",
+              },
+            },
+          ],
+          "final": false,
+          "kind": "classconstant",
+          "leadingComments": [
+            CommentLine {
+              "kind": "commentline",
+              "offset": 332,
+              "value": "// some doc
+",
+            },
+          ],
+          "visibility": "",
+        },
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": null,
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "leadingComments": [
+            CommentBlock {
+              "kind": "commentblock",
+              "offset": 375,
+              "value": "/** foo */",
+            },
+          ],
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "foo",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "protected",
+        },
+      ],
+      "extends": [
+        Name {
+          "kind": "name",
+          "name": "something",
+          "resolution": "uqn",
+        },
+      ],
+      "kind": "interface",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "boo",
+      },
+    },
+    Trait {
+      "body": [
+        ClassConstant {
+          "attrGroups": [],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "A",
+              },
+              "value": Number {
+                "kind": "number",
+                "value": "1.5",
+              },
+            },
+          ],
+          "final": false,
+          "kind": "classconstant",
+          "leadingComments": [
+            CommentLine {
+              "kind": "commentline",
+              "offset": 455,
+              "value": "// some doc
+",
+            },
+          ],
+          "visibility": "",
+        },
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": null,
+          "byref": false,
+          "isAbstract": true,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "foo",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "protected",
+        },
+      ],
+      "kind": "trait",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "line",
+      },
+    },
+  ],
+  "comments": [
+    CommentLine {
+      "kind": "commentline",
+      "offset": 87,
+      "value": "// comment
+",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 106,
+      "value": "/* boo */",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 124,
+      "value": "/** doc
+         * data
+           foo
+         */",
+    },
+    CommentLine {
+      "kind": "commentline",
+      "offset": 332,
+      "value": "// some doc
+",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 375,
+      "value": "/** foo */",
+    },
+    CommentLine {
+      "kind": "commentline",
+      "offset": 455,
+      "value": "// some doc
+",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes Implement #183 : static keyword as identifier 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              ExpressionStatement {
+                "expression": Call {
+                  "arguments": [],
+                  "kind": "call",
+                  "what": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "foo",
+                    },
+                    "what": ParentReference {
+                      "kind": "parentreference",
+                      "raw": "parent",
+                    },
+                  },
+                },
+                "kind": "expressionstatement",
+              },
+              ExpressionStatement {
+                "expression": Call {
+                  "arguments": [],
+                  "kind": "call",
+                  "what": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "bar",
+                    },
+                    "what": SelfReference {
+                      "kind": "selfreference",
+                      "raw": "self",
+                    },
+                  },
+                },
+                "kind": "expressionstatement",
+              },
+              ExpressionStatement {
+                "expression": Call {
+                  "arguments": [],
+                  "kind": "call",
+                  "what": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "baz",
+                    },
+                    "what": StaticReference {
+                      "kind": "staticreference",
+                      "raw": "static",
+                    },
+                  },
+                },
+                "kind": "expressionstatement",
+              },
+              ExpressionStatement {
+                "expression": Call {
+                  "arguments": [],
+                  "kind": "call",
+                  "what": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "fooBar",
+                    },
+                    "what": Name {
+                      "kind": "name",
+                      "name": "A",
+                      "resolution": "uqn",
+                    },
+                  },
+                },
+                "kind": "expressionstatement",
+              },
+              ExpressionStatement {
+                "expression": Call {
+                  "arguments": [],
+                  "kind": "call",
+                  "what": PropertyLookup {
+                    "kind": "propertylookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "fooBaz",
+                    },
+                    "what": Variable {
+                      "curly": false,
+                      "kind": "variable",
+                      "name": "this",
+                    },
+                  },
+                },
+                "kind": "expressionstatement",
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": true,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "test",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "A",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes Implement readonly property 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "uid",
+              },
+              "nullable": false,
+              "readonly": true,
+              "type": TypeReference {
+                "kind": "typereference",
+                "name": "int",
+                "raw": "int",
+              },
+              "value": null,
+            },
+          ],
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "User",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes Implement typed_properties_v2 / php74 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "prop",
+              },
+              "nullable": true,
+              "readonly": false,
+              "type": TypeReference {
+                "kind": "typereference",
+                "name": "int",
+                "raw": "int",
+              },
+              "value": NullKeyword {
+                "kind": "nullkeyword",
+                "raw": "null",
+              },
+            },
+          ],
+          "visibility": "public",
+        },
+        PropertyStatement {
+          "isStatic": true,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "y",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": UnionType {
+                "kind": "uniontype",
+                "name": null,
+                "types": [
+                  TypeReference {
+                    "kind": "typereference",
+                    "name": "float",
+                    "raw": "float",
+                  },
+                  TypeReference {
+                    "kind": "typereference",
+                    "name": "string",
+                    "raw": "string",
+                  },
+                ],
+              },
+              "value": null,
+            },
+          ],
+          "visibility": "protected",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Test",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes Test js properties 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        PropertyStatement {
+          "isStatic": true,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "constructor",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+          ],
+          "visibility": "",
+        },
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "constructor",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "public",
+        },
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              ExpressionStatement {
+                "expression": Assign {
+                  "kind": "assign",
+                  "left": PropertyLookup {
+                    "kind": "propertylookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "constructor",
+                    },
+                    "what": Variable {
+                      "curly": false,
+                      "kind": "variable",
+                      "name": "this",
+                    },
+                  },
+                  "operator": "=",
+                  "right": NullKeyword {
+                    "kind": "nullkeyword",
+                    "raw": "null",
+                  },
+                },
+                "kind": "expressionstatement",
+              },
+              ExpressionStatement {
+                "expression": Assign {
+                  "kind": "assign",
+                  "left": StaticLookup {
+                    "kind": "staticlookup",
+                    "offset": Variable {
+                      "curly": false,
+                      "kind": "variable",
+                      "name": "constructor",
+                    },
+                    "what": SelfReference {
+                      "kind": "selfreference",
+                      "raw": "self",
+                    },
+                  },
+                  "operator": "=",
+                  "right": NullKeyword {
+                    "kind": "nullkeyword",
+                    "raw": "null",
+                  },
+                },
+                "kind": "expressionstatement",
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "__proto__",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "__proto__",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes Test of silent mode 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        TraitUse {
+          "adaptations": null,
+          "kind": "traituse",
+          "traits": [
+            Name {
+              "kind": "name",
+              "name": "A",
+              "resolution": "uqn",
+            },
+          ],
+        },
+        TraitUse {
+          "adaptations": [
+            TraitAlias {
+              "as": null,
+              "kind": "traitalias",
+              "method": "foo",
+              "trait": null,
+              "visibility": "",
+            },
+            TraitAlias {
+              "as": null,
+              "kind": "traitalias",
+              "method": "",
+              "trait": null,
+              "visibility": "",
+            },
+          ],
+          "kind": "traituse",
+          "traits": [
+            Name {
+              "kind": "name",
+              "name": "B",
+              "resolution": "uqn",
+            },
+          ],
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": ";",
+      "kind": "error",
+      "line": 4,
+      "message": "Parse Error : syntax error, unexpected 'use' (T_USE), expecting ';' on line 4",
+      "token": "'use' (T_USE)",
+    },
+    Error {
+      "expected": [
+        119,
+        200,
+      ],
+      "kind": "error",
+      "line": 4,
+      "message": "Parse Error : syntax error, unexpected '}' on line 4",
+      "token": "'}'",
+    },
+    Error {
+      "expected": ";",
+      "kind": "error",
+      "line": 4,
+      "message": "Parse Error : syntax error, unexpected '}', expecting ';' on line 4",
+      "token": "'}'",
+    },
+    Error {
+      "expected": 105,
+      "kind": "error",
+      "line": 4,
+      "message": "Parse Error : syntax error, unexpected ';', expecting T_STRING on line 4",
+      "token": "';'",
+    },
+    Error {
+      "expected": [
+        119,
+        200,
+      ],
+      "kind": "error",
+      "line": 4,
+      "message": "Parse Error : syntax error, unexpected ';' on line 4",
+      "token": "';'",
+    },
+    Error {
+      "expected": "}",
+      "kind": "error",
+      "line": 5,
+      "message": "Parse Error : syntax error, expecting '}' on line 5",
+      "token": "the end of file (EOF)",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes Test promoted class properties php 8 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        Method {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 1,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "id",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": TypeReference {
+                "kind": "typereference",
+                "name": "int",
+                "raw": "int",
+              },
+              "value": null,
+              "variadic": false,
+            },
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 4,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "name",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "c",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": TypeReference {
+                "kind": "typereference",
+                "name": "int",
+                "raw": "int",
+              },
+              "value": null,
+              "variadic": false,
+            },
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 2,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "req",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": Name {
+                "kind": "name",
+                "name": "ServerRequestInterface",
+                "resolution": "uqn",
+              },
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "constructor",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "__proto__",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes Test promoted nullable properties php 8 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        Method {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 1,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "maybe",
+              },
+              "nullable": true,
+              "readonly": false,
+              "type": TypeReference {
+                "kind": "typereference",
+                "name": "string",
+                "raw": "string",
+              },
+              "value": null,
+              "variadic": false,
+            },
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 4,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "opt",
+              },
+              "nullable": true,
+              "readonly": false,
+              "type": TypeReference {
+                "kind": "typereference",
+                "name": "int",
+                "raw": "int",
+              },
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "constructor",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "__proto__",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes Test promoted readonly class properties 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        Method {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 1,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "id",
+              },
+              "nullable": false,
+              "readonly": true,
+              "type": TypeReference {
+                "kind": "typereference",
+                "name": "int",
+                "raw": "int",
+              },
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "__construct",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Bob",
+      },
+    },
+    Class {
+      "attrGroups": [],
+      "body": [
+        Method {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 1,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "id",
+              },
+              "nullable": false,
+              "readonly": true,
+              "type": TypeReference {
+                "kind": "typereference",
+                "name": "int",
+                "raw": "int",
+              },
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "__construct",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Bob2",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes Test that readonly method parameters are throwing errors 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        Method {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 1,
+              "kind": "parameter",
+              "name": null,
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": null,
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "foo",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "public",
+        },
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": null,
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "id",
+              },
+              "nullable": TypeReference {
+                "kind": "typereference",
+                "name": "int",
+                "raw": "int",
+              },
+              "readonly": false,
+              "type": [],
+              "value": null,
+            },
+          ],
+          "visibility": "",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Bob",
+      },
+    },
+    ExpressionStatement {
+      "expression": undefined,
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": undefined,
+      "kind": "error",
+      "line": 3,
+      "message": "readonly properties can be used only on class constructor on line 3",
+      "token": undefined,
+    },
+    Error {
+      "expected": 222,
+      "kind": "error",
+      "line": 3,
+      "message": "Parse Error : syntax error, unexpected 'readonly' (T_READ_ONLY), expecting T_VARIABLE on line 3",
+      "token": "'readonly' (T_READ_ONLY)",
+    },
+    Error {
+      "expected": [
+        ",",
+        ")",
+      ],
+      "kind": "error",
+      "line": 3,
+      "message": "Parse Error : syntax error, unexpected 'readonly' (T_READ_ONLY) on line 3",
+      "token": "'readonly' (T_READ_ONLY)",
+    },
+    Error {
+      "expected": ")",
+      "kind": "error",
+      "line": 3,
+      "message": "Parse Error : syntax error, unexpected 'readonly' (T_READ_ONLY), expecting ')' on line 3",
+      "token": "'readonly' (T_READ_ONLY)",
+    },
+    Error {
+      "expected": "{",
+      "kind": "error",
+      "line": 3,
+      "message": "Parse Error : syntax error, unexpected 'readonly' (T_READ_ONLY), expecting '{' on line 3",
+      "token": "'readonly' (T_READ_ONLY)",
+    },
+    Error {
+      "expected": [
+        ",",
+        ";",
+        "=",
+      ],
+      "kind": "error",
+      "line": 3,
+      "message": "Parse Error : syntax error, unexpected ')' on line 3",
+      "token": "')'",
+    },
+    Error {
+      "expected": ";",
+      "kind": "error",
+      "line": 3,
+      "message": "Parse Error : syntax error, unexpected ')', expecting ';' on line 3",
+      "token": "')'",
+    },
+    Error {
+      "expected": [
+        198,
+        222,
+        182,
+      ],
+      "kind": "error",
+      "line": 3,
+      "message": "Parse Error : syntax error, unexpected '{' on line 3",
+      "token": "'{'",
+    },
+    Error {
+      "expected": "EXPR",
+      "kind": "error",
+      "line": 4,
+      "message": "Parse Error : syntax error, unexpected '}' on line 4",
+      "token": "'}'",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes Validate usual declarations 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        ClassConstant {
+          "attrGroups": [],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "FOO",
+              },
+              "value": String {
+                "isDoubleQuote": true,
+                "kind": "string",
+                "raw": ""azerty"",
+                "unicode": false,
+                "value": "azerty",
+              },
+            },
+          ],
+          "final": false,
+          "kind": "classconstant",
+          "visibility": "",
+        },
+        PropertyStatement {
+          "isStatic": true,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "var",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+          ],
+          "visibility": "public",
+        },
+        Method {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "data",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": TypeReference {
+                "kind": "typereference",
+                "name": "array",
+                "raw": "array",
+              },
+              "value": NullKeyword {
+                "kind": "nullkeyword",
+                "raw": "null",
+              },
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              ExpressionStatement {
+                "expression": Assign {
+                  "kind": "assign",
+                  "left": PropertyLookup {
+                    "kind": "propertylookup",
+                    "offset": Identifier {
+                      "kind": "identifier",
+                      "name": "data",
+                    },
+                    "what": Variable {
+                      "curly": false,
+                      "kind": "variable",
+                      "name": "this",
+                    },
+                  },
+                  "operator": "=",
+                  "right": Variable {
+                    "curly": false,
+                    "kind": "variable",
+                    "name": "data",
+                  },
+                },
+                "kind": "expressionstatement",
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "__construct",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "public",
+        },
+        ClassConstant {
+          "attrGroups": [],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "list",
+              },
+              "value": String {
+                "isDoubleQuote": true,
+                "kind": "string",
+                "raw": ""bar"",
+                "unicode": false,
+                "value": "bar",
+              },
+            },
+          ],
+          "final": false,
+          "kind": "classconstant",
+          "visibility": "",
+        },
+        Method {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "foo",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": StaticLookup {
+                "kind": "staticlookup",
+                "offset": Identifier {
+                  "kind": "identifier",
+                  "name": "list",
+                },
+                "what": SelfReference {
+                  "kind": "selfreference",
+                  "raw": "self",
+                },
+              },
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Return {
+                "expr": StaticLookup {
+                  "kind": "staticlookup",
+                  "offset": Identifier {
+                    "kind": "identifier",
+                    "name": "list",
+                  },
+                  "what": Variable {
+                    "curly": false,
+                    "kind": "variable",
+                    "name": "this",
+                  },
+                },
+                "kind": "return",
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "new",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "public",
+        },
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "foo",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+          ],
+          "visibility": "protected",
+        },
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "bar",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+            },
+          ],
+          "visibility": "private",
+        },
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "foobar",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "",
+        },
+      ],
+      "extends": Name {
+        "kind": "name",
+        "name": "bar",
+        "resolution": "uqn",
+      },
+      "implements": [
+        Name {
+          "kind": "name",
+          "name": "bim",
+          "resolution": "uqn",
+        },
+        Name {
+          "kind": "name",
+          "name": "bam",
+          "resolution": "uqn",
+        },
+        Name {
+          "kind": "name",
+          "name": "boum",
+          "resolution": "uqn",
+        },
+      ],
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": true,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+    },
+    Class {
+      "attrGroups": [],
+      "body": [
+        TraitUse {
+          "adaptations": [
+            TraitPrecedence {
+              "instead": [
+                Name {
+                  "kind": "name",
+                  "name": "A",
+                  "resolution": "uqn",
+                },
+              ],
+              "kind": "traitprecedence",
+              "method": Identifier {
+                "kind": "identifier",
+                "name": "smallTalk",
+              },
+              "trait": Name {
+                "kind": "name",
+                "name": "B",
+                "resolution": "uqn",
+              },
+            },
+            TraitPrecedence {
+              "instead": [
+                Name {
+                  "kind": "name",
+                  "name": "B",
+                  "resolution": "uqn",
+                },
+                Name {
+                  "kind": "name",
+                  "name": "C",
+                  "resolution": "uqn",
+                },
+              ],
+              "kind": "traitprecedence",
+              "method": Identifier {
+                "kind": "identifier",
+                "name": "bigTalk",
+              },
+              "trait": Name {
+                "kind": "name",
+                "name": "A",
+                "resolution": "uqn",
+              },
+            },
+            TraitAlias {
+              "as": Identifier {
+                "kind": "identifier",
+                "name": "talk",
+              },
+              "kind": "traitalias",
+              "method": Identifier {
+                "kind": "identifier",
+                "name": "bigTalk",
+              },
+              "trait": Name {
+                "kind": "name",
+                "name": "B",
+                "resolution": "uqn",
+              },
+              "visibility": "public",
+            },
+            TraitAlias {
+              "as": Identifier {
+                "kind": "identifier",
+                "name": "talk",
+              },
+              "kind": "traitalias",
+              "method": Identifier {
+                "kind": "identifier",
+                "name": "bigTalk",
+              },
+              "trait": Name {
+                "kind": "name",
+                "name": "B",
+                "resolution": "uqn",
+              },
+              "visibility": "protected",
+            },
+            TraitAlias {
+              "as": Identifier {
+                "kind": "identifier",
+                "name": "talk",
+              },
+              "kind": "traitalias",
+              "method": Identifier {
+                "kind": "identifier",
+                "name": "bigTalk",
+              },
+              "trait": Name {
+                "kind": "name",
+                "name": "B",
+                "resolution": "uqn",
+              },
+              "visibility": "private",
+            },
+            TraitAlias {
+              "as": Identifier {
+                "kind": "identifier",
+                "name": "list",
+              },
+              "kind": "traitalias",
+              "method": Identifier {
+                "kind": "identifier",
+                "name": "new",
+              },
+              "trait": Name {
+                "kind": "name",
+                "name": "A",
+                "resolution": "uqn",
+              },
+              "visibility": "",
+            },
+            TraitAlias {
+              "as": Identifier {
+                "kind": "identifier",
+                "name": "new",
+              },
+              "kind": "traitalias",
+              "method": Identifier {
+                "kind": "identifier",
+                "name": "list",
+              },
+              "trait": null,
+              "visibility": "",
+            },
+          ],
+          "kind": "traituse",
+          "traits": [
+            Name {
+              "kind": "name",
+              "name": "A",
+              "resolution": "uqn",
+            },
+            Name {
+              "kind": "name",
+              "name": "B",
+              "resolution": "uqn",
+            },
+          ],
+        },
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": null,
+          "byref": true,
+          "isAbstract": true,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "foo",
+          },
+          "nullable": false,
+          "type": Name {
+            "kind": "name",
+            "name": "bar",
+            "resolution": "uqn",
+          },
+          "visibility": "protected",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": true,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "bar",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes abstract and final 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": 187,
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected 'final' (T_FINAL), expecting T_CLASS on line 1",
+      "token": "'final' (T_FINAL)",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes class name as identifier 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "A",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes empty 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes final and abstract 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": 187,
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected 'abstract' (T_ABSTRACT), expecting T_CLASS on line 1",
+      "token": "'abstract' (T_ABSTRACT)",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes handles property types with a leading \\ 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "baz",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": Name {
+                "kind": "name",
+                "name": "\\Bar",
+                "resolution": "fqn",
+              },
+              "value": null,
+            },
+          ],
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes readonly class in PHP8.2 should support abstract readonly 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": true,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": true,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes readonly class in PHP8.2 should support final readonly 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": true,
+      "isReadonly": true,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes readonly class in PHP8.2 should support readonly 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": true,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes readonly class in PHP8.2 should support readonly abstract 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": true,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": true,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test classes readonly class in PHP8.2 should support readonly final 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": true,
+      "isReadonly": true,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "Foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`static assign 1`] = `
+Program {
+  "children": [
+    Static {
+      "kind": "static",
+      "variables": [
+        StaticVariable {
+          "defaultValue": Number {
+            "kind": "number",
+            "value": "1",
+          },
+          "kind": "staticvariable",
+          "variable": Variable {
+            "curly": false,
+            "kind": "variable",
+            "name": "foo",
+          },
+        },
+      ],
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`static multiple 1`] = `
+Program {
+  "children": [
+    Static {
+      "kind": "static",
+      "variables": [
+        StaticVariable {
+          "defaultValue": Number {
+            "kind": "number",
+            "value": "1",
+          },
+          "kind": "staticvariable",
+          "variable": Variable {
+            "curly": false,
+            "kind": "variable",
+            "name": "foo",
+          },
+        },
+        StaticVariable {
+          "defaultValue": Number {
+            "kind": "number",
+            "value": "2",
+          },
+          "kind": "staticvariable",
+          "variable": Variable {
+            "curly": false,
+            "kind": "variable",
+            "name": "bar",
+          },
+        },
+        StaticVariable {
+          "defaultValue": Number {
+            "kind": "number",
+            "value": "3",
+          },
+          "kind": "staticvariable",
+          "variable": Variable {
+            "curly": false,
+            "kind": "variable",
+            "name": "baz",
+          },
+        },
+      ],
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`static simple 1`] = `
+Program {
+  "children": [
+    Static {
+      "kind": "static",
+      "variables": [
+        Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "foo",
+        },
+      ],
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

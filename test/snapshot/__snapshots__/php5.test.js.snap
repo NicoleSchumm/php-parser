@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test syntax parsing without PHP7 support special keywords should fail 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        Method {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": null,
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": null,
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": false,
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+    },
+    ExpressionStatement {
+      "expression": undefined,
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": "IDENTIFIER",
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected 'list' (T_LIST) on line 1",
+      "token": "'list' (T_LIST)",
+    },
+    Error {
+      "expected": "(",
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected 'list' (T_LIST), expecting '(' on line 1",
+      "token": "'list' (T_LIST)",
+    },
+    Error {
+      "expected": 222,
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected 'list' (T_LIST), expecting T_VARIABLE on line 1",
+      "token": "'list' (T_LIST)",
+    },
+    Error {
+      "expected": [
+        ",",
+        ")",
+      ],
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected 'list' (T_LIST) on line 1",
+      "token": "'list' (T_LIST)",
+    },
+    Error {
+      "expected": ")",
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected 'list' (T_LIST), expecting ')' on line 1",
+      "token": "'list' (T_LIST)",
+    },
+    Error {
+      "expected": "{",
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected 'list' (T_LIST), expecting '{' on line 1",
+      "token": "'list' (T_LIST)",
+    },
+    Error {
+      "expected": [
+        198,
+        222,
+        182,
+      ],
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected 'list' (T_LIST) on line 1",
+      "token": "'list' (T_LIST)",
+    },
+    Error {
+      "expected": [
+        198,
+        222,
+        182,
+      ],
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected '(' on line 1",
+      "token": "'('",
+    },
+    Error {
+      "expected": [
+        198,
+        222,
+        182,
+      ],
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected ')' on line 1",
+      "token": "')'",
+    },
+    Error {
+      "expected": [
+        198,
+        222,
+        182,
+      ],
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected '{' on line 1",
+      "token": "'{'",
+    },
+    Error {
+      "expected": "EXPR",
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected '}' on line 1",
+      "token": "'}'",
+    },
+  ],
+  "kind": "program",
+}
+`;

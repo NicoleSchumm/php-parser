@@ -1,0 +1,940 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`block check empty php blocks 1`] = `
+Program {
+  "children": [
+    Inline {
+      "kind": "inline",
+      "leadingComments": [
+        CommentBlock {
+          "kind": "commentblock",
+          "offset": 8,
+          "value": "/**
+   * Comment header
+   */",
+        },
+      ],
+      "raw": "
+SOME HTML OUTPUT
+",
+      "trailingComments": [
+        CommentBlock {
+          "kind": "commentblock",
+          "offset": 64,
+          "value": "/* Inner comment */",
+        },
+      ],
+      "value": "SOME HTML OUTPUT
+",
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 8,
+      "value": "/**
+   * Comment header
+   */",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 64,
+      "value": "/* Inner comment */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block check empty php file 1`] = `
+Program {
+  "children": [
+    Noop {
+      "kind": "noop",
+      "leadingComments": [
+        CommentBlock {
+          "kind": "commentblock",
+          "offset": 8,
+          "value": "/**
+   * Comment header
+   */",
+        },
+      ],
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 8,
+      "value": "/**
+   * Comment header
+   */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty class block 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+        "trailingComments": [
+          CommentBlock {
+            "kind": "commentblock",
+            "offset": 12,
+            "value": "/* 1 */",
+          },
+        ],
+      },
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 12,
+      "value": "/* 1 */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty declare block 1`] = `
+Program {
+  "children": [
+    Declare {
+      "children": [
+        Noop {
+          "kind": "noop",
+          "leadingComments": [
+            CommentBlock {
+              "kind": "commentblock",
+              "offset": 18,
+              "value": "/* 1 */",
+            },
+          ],
+        },
+      ],
+      "directives": [
+        DeclareDirective {
+          "key": Identifier {
+            "kind": "identifier",
+            "name": "tick",
+          },
+          "kind": "declaredirective",
+          "value": Number {
+            "kind": "number",
+            "value": "1",
+          },
+        },
+      ],
+      "kind": "declare",
+      "mode": "block",
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 18,
+      "value": "/* 1 */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty declare short form 1`] = `
+Program {
+  "children": [
+    Declare {
+      "children": [
+        Noop {
+          "kind": "noop",
+          "leadingComments": [
+            CommentBlock {
+              "kind": "commentblock",
+              "offset": 17,
+              "value": "/* 1 */",
+            },
+          ],
+        },
+      ],
+      "directives": [
+        DeclareDirective {
+          "key": Identifier {
+            "kind": "identifier",
+            "name": "tick",
+          },
+          "kind": "declaredirective",
+          "value": Number {
+            "kind": "number",
+            "value": "1",
+          },
+        },
+      ],
+      "kind": "declare",
+      "mode": "short",
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 17,
+      "value": "/* 1 */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty for 1`] = `
+Program {
+  "children": [
+    For {
+      "body": Block {
+        "children": [
+          Noop {
+            "kind": "noop",
+            "leadingComments": [
+              CommentBlock {
+                "kind": "commentblock",
+                "offset": 10,
+                "value": "/* foo */",
+              },
+            ],
+          },
+        ],
+        "kind": "block",
+      },
+      "increment": [],
+      "init": [],
+      "kind": "for",
+      "shortForm": false,
+      "test": [],
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 10,
+      "value": "/* foo */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty for short form 1`] = `
+Program {
+  "children": [
+    For {
+      "body": Block {
+        "children": [
+          Noop {
+            "kind": "noop",
+            "leadingComments": [
+              CommentBlock {
+                "kind": "commentblock",
+                "offset": 10,
+                "value": "/* foo */",
+              },
+            ],
+          },
+        ],
+        "kind": "block",
+      },
+      "increment": [],
+      "init": [],
+      "kind": "for",
+      "shortForm": true,
+      "test": [],
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 10,
+      "value": "/* foo */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty foreach 1`] = `
+Program {
+  "children": [
+    Foreach {
+      "body": Block {
+        "children": [
+          Noop {
+            "kind": "noop",
+            "leadingComments": [
+              CommentBlock {
+                "kind": "commentblock",
+                "offset": 24,
+                "value": "/* foo */",
+              },
+            ],
+          },
+        ],
+        "kind": "block",
+      },
+      "key": null,
+      "kind": "foreach",
+      "shortForm": false,
+      "source": Variable {
+        "curly": false,
+        "kind": "variable",
+        "name": "foo",
+      },
+      "value": Variable {
+        "curly": false,
+        "kind": "variable",
+        "name": "bar",
+      },
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 24,
+      "value": "/* foo */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty foreach short form 1`] = `
+Program {
+  "children": [
+    Foreach {
+      "body": Block {
+        "children": [
+          Noop {
+            "kind": "noop",
+            "leadingComments": [
+              CommentBlock {
+                "kind": "commentblock",
+                "offset": 23,
+                "value": "/* foo */",
+              },
+            ],
+          },
+        ],
+        "kind": "block",
+      },
+      "key": null,
+      "kind": "foreach",
+      "shortForm": true,
+      "source": Variable {
+        "curly": false,
+        "kind": "variable",
+        "name": "foo",
+      },
+      "value": Variable {
+        "curly": false,
+        "kind": "variable",
+        "name": "bar",
+      },
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 23,
+      "value": "/* foo */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty function block 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [],
+      "attrGroups": [],
+      "body": Block {
+        "children": [
+          Noop {
+            "kind": "noop",
+            "leadingComments": [
+              CommentBlock {
+                "kind": "commentblock",
+                "offset": 17,
+                "value": "/* 1 */",
+              },
+            ],
+          },
+        ],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 17,
+      "value": "/* 1 */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty if #2 short form 1`] = `
+Program {
+  "children": [
+    If {
+      "alternate": null,
+      "body": Block {
+        "children": [
+          ExpressionStatement {
+            "expression": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "a",
+            },
+            "kind": "expressionstatement",
+          },
+        ],
+        "kind": "block",
+        "leadingComments": [
+          CommentBlock {
+            "kind": "commentblock",
+            "offset": 10,
+            "value": "/* pre */",
+          },
+        ],
+        "trailingComments": [
+          CommentBlock {
+            "kind": "commentblock",
+            "offset": 24,
+            "value": "/* inner */",
+          },
+        ],
+      },
+      "kind": "if",
+      "shortForm": true,
+      "test": Variable {
+        "curly": false,
+        "kind": "variable",
+        "name": "foo",
+      },
+      "trailingComments": [
+        CommentBlock {
+          "kind": "commentblock",
+          "offset": 43,
+          "value": "/* out */",
+        },
+      ],
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 10,
+      "value": "/* pre */",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 24,
+      "value": "/* inner */",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 43,
+      "value": "/* out */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty if #3 short form 1`] = `
+Program {
+  "children": [
+    If {
+      "alternate": If {
+        "alternate": Block {
+          "children": [],
+          "kind": "block",
+          "leadingComments": [
+            CommentBlock {
+              "kind": "commentblock",
+              "offset": 50,
+              "value": "/* bar */",
+            },
+          ],
+        },
+        "body": Block {
+          "children": [],
+          "kind": "block",
+          "leadingComments": [
+            CommentBlock {
+              "kind": "commentblock",
+              "offset": 34,
+              "value": "/* baz */",
+            },
+          ],
+        },
+        "kind": "if",
+        "shortForm": true,
+        "test": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "bar",
+        },
+      },
+      "body": Block {
+        "children": [],
+        "kind": "block",
+        "leadingComments": [
+          CommentBlock {
+            "kind": "commentblock",
+            "offset": 10,
+            "value": "/* foo */",
+          },
+        ],
+      },
+      "kind": "if",
+      "shortForm": true,
+      "test": Variable {
+        "curly": false,
+        "kind": "variable",
+        "name": "foo",
+      },
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 10,
+      "value": "/* foo */",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 34,
+      "value": "/* baz */",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 50,
+      "value": "/* bar */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty if 1`] = `
+Program {
+  "children": [
+    If {
+      "alternate": null,
+      "body": Block {
+        "children": [
+          Noop {
+            "kind": "noop",
+            "leadingComments": [
+              CommentBlock {
+                "kind": "commentblock",
+                "offset": 11,
+                "value": "/* foo */",
+              },
+            ],
+          },
+        ],
+        "kind": "block",
+      },
+      "kind": "if",
+      "shortForm": false,
+      "test": Variable {
+        "curly": false,
+        "kind": "variable",
+        "name": "foo",
+      },
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 11,
+      "value": "/* foo */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty if short form 1`] = `
+Program {
+  "children": [
+    If {
+      "alternate": null,
+      "body": Block {
+        "children": [],
+        "kind": "block",
+        "leadingComments": [
+          CommentBlock {
+            "kind": "commentblock",
+            "offset": 10,
+            "value": "/* foo */",
+          },
+        ],
+      },
+      "kind": "if",
+      "shortForm": true,
+      "test": Variable {
+        "curly": false,
+        "kind": "variable",
+        "name": "foo",
+      },
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 10,
+      "value": "/* foo */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty method block 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        Method {
+          "arguments": [],
+          "attrGroups": [],
+          "body": Block {
+            "children": [
+              Noop {
+                "kind": "noop",
+                "leadingComments": [
+                  CommentBlock {
+                    "kind": "commentblock",
+                    "offset": 30,
+                    "value": "/* 1 */",
+                  },
+                ],
+              },
+            ],
+            "kind": "block",
+          },
+          "byref": false,
+          "isAbstract": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "isStatic": false,
+          "kind": "method",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "bar",
+          },
+          "nullable": false,
+          "type": null,
+          "visibility": "",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 30,
+      "value": "/* 1 */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty namespace block 1`] = `
+Program {
+  "children": [
+    Namespace {
+      "children": [
+        Noop {
+          "kind": "noop",
+          "leadingComments": [
+            CommentBlock {
+              "kind": "commentblock",
+              "offset": 16,
+              "value": "/* 1 */",
+            },
+          ],
+        },
+      ],
+      "kind": "namespace",
+      "name": "foo",
+      "withBrackets": true,
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 16,
+      "value": "/* 1 */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty statement 1`] = `
+Program {
+  "children": [],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 0,
+      "value": "/* 1 */",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 9,
+      "value": "/* 2 */",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 20,
+      "value": "/* 3 */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+  "trailingComments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 0,
+      "value": "/* 1 */",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 9,
+      "value": "/* 2 */",
+    },
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 20,
+      "value": "/* 3 */",
+    },
+  ],
+}
+`;
+
+exports[`block empty switch 1`] = `
+Program {
+  "children": [
+    Switch {
+      "body": Block {
+        "children": [
+          Noop {
+            "kind": "noop",
+            "leadingComments": [
+              CommentBlock {
+                "kind": "commentblock",
+                "offset": 15,
+                "value": "/* foo */",
+              },
+            ],
+          },
+        ],
+        "kind": "block",
+      },
+      "kind": "switch",
+      "shortForm": false,
+      "test": Variable {
+        "curly": false,
+        "kind": "variable",
+        "name": "foo",
+      },
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 15,
+      "value": "/* foo */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty switch case short form 1`] = `
+Program {
+  "children": [
+    Switch {
+      "body": Block {
+        "children": [
+          Case {
+            "body": Block {
+              "children": [],
+              "kind": "block",
+              "leadingComments": [
+                CommentBlock {
+                  "kind": "commentblock",
+                  "offset": 22,
+                  "value": "/* foo */",
+                },
+              ],
+            },
+            "kind": "case",
+            "test": Number {
+              "kind": "number",
+              "value": "1",
+            },
+          },
+        ],
+        "kind": "block",
+      },
+      "kind": "switch",
+      "shortForm": true,
+      "test": Variable {
+        "curly": false,
+        "kind": "variable",
+        "name": "foo",
+      },
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 22,
+      "value": "/* foo */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block empty switch short form 1`] = `
+Program {
+  "children": [
+    Switch {
+      "body": Block {
+        "children": [
+          Noop {
+            "kind": "noop",
+            "leadingComments": [
+              CommentBlock {
+                "kind": "commentblock",
+                "offset": 14,
+                "value": "/* foo */",
+              },
+            ],
+          },
+        ],
+        "kind": "block",
+      },
+      "kind": "switch",
+      "shortForm": true,
+      "test": Variable {
+        "curly": false,
+        "kind": "variable",
+        "name": "foo",
+      },
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "offset": 14,
+      "value": "/* foo */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`block single 1`] = `
+Program {
+  "children": [
+    Block {
+      "children": [
+        ExpressionStatement {
+          "expression": Assign {
+            "kind": "assign",
+            "left": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "var",
+            },
+            "operator": "=",
+            "right": Number {
+              "kind": "number",
+              "value": "1",
+            },
+          },
+          "kind": "expressionstatement",
+        },
+      ],
+      "kind": "block",
+    },
+  ],
+  "comments": [],
+  "errors": [],
+  "kind": "program",
+}
+`;

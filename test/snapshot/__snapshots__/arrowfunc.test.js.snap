@@ -1,0 +1,546 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`arrow function argument 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": String {
+            "isDoubleQuote": true,
+            "kind": "string",
+            "raw": ""something"",
+            "unicode": false,
+            "value": "something",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "arrowfunc",
+          "nullable": false,
+          "type": null,
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`arrow function argument by ref 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": true,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": String {
+            "isDoubleQuote": true,
+            "kind": "string",
+            "raw": ""something"",
+            "unicode": false,
+            "value": "something",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "arrowfunc",
+          "nullable": false,
+          "type": null,
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`arrow function arguments 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+            Parameter {
+              "attrGroups": [],
+              "byref": false,
+              "flags": 0,
+              "kind": "parameter",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "arg",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": null,
+              "variadic": false,
+            },
+          ],
+          "attrGroups": [],
+          "body": String {
+            "isDoubleQuote": true,
+            "kind": "string",
+            "raw": ""something"",
+            "unicode": false,
+            "value": "something",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "arrowfunc",
+          "nullable": false,
+          "type": null,
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`arrow function error / arrow functions before PHP 7.4 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "fn1",
+        },
+        "operator": "=",
+        "right": Call {
+          "arguments": [
+            Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "x",
+            },
+          ],
+          "kind": "call",
+          "what": Name {
+            "kind": "name",
+            "name": "fn",
+            "resolution": "uqn",
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+    ExpressionStatement {
+      "expression": undefined,
+      "kind": "expressionstatement",
+    },
+    ExpressionStatement {
+      "expression": Bin {
+        "kind": "bin",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "x",
+        },
+        "right": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "y",
+        },
+        "type": "+",
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": ";",
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ';' on line 1",
+      "token": "'=>' (T_DOUBLE_ARROW)",
+    },
+    Error {
+      "expected": "EXPR",
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected '=>' (T_DOUBLE_ARROW) on line 1",
+      "token": "'=>' (T_DOUBLE_ARROW)",
+    },
+    Error {
+      "expected": ";",
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected '$x' (T_VARIABLE), expecting ';' on line 1",
+      "token": "'$x' (T_VARIABLE)",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`arrow function error / empty not allowed 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": undefined,
+          "byref": false,
+          "isStatic": false,
+          "kind": "arrowfunc",
+          "nullable": false,
+          "type": null,
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": "EXPR",
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected ';' on line 1",
+      "token": "';'",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`arrow function error / fn fails on php7.4 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "arg",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": null,
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [
+          Return {
+            "expr": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "arg",
+            },
+            "kind": "return",
+          },
+        ],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": false,
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": "(",
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected 'fn' (T_FN), expecting '(' on line 1",
+      "token": "'fn' (T_FN)",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`arrow function error / fn passes on php7.3 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "arg",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": null,
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [
+          Return {
+            "expr": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "arg",
+            },
+            "kind": "return",
+          },
+        ],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "fn",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`arrow function inside call 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Call {
+        "arguments": [
+          Closure {
+            "arguments": [
+              Parameter {
+                "attrGroups": [],
+                "byref": false,
+                "flags": 0,
+                "kind": "parameter",
+                "name": Identifier {
+                  "kind": "identifier",
+                  "name": "arg",
+                },
+                "nullable": false,
+                "readonly": false,
+                "type": null,
+                "value": null,
+                "variadic": false,
+              },
+            ],
+            "attrGroups": [],
+            "body": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "arg",
+            },
+            "byref": false,
+            "isStatic": false,
+            "kind": "arrowfunc",
+            "nullable": false,
+            "type": null,
+          },
+        ],
+        "kind": "call",
+        "what": Name {
+          "kind": "name",
+          "name": "call",
+          "resolution": "uqn",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`arrow function return type 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": String {
+            "isDoubleQuote": true,
+            "kind": "string",
+            "raw": ""something"",
+            "unicode": false,
+            "value": "something",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "arrowfunc",
+          "nullable": true,
+          "type": TypeReference {
+            "kind": "typereference",
+            "name": "string",
+            "raw": "string",
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`arrow function simple 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Closure {
+          "arguments": [],
+          "attrGroups": [],
+          "body": String {
+            "isDoubleQuote": true,
+            "kind": "string",
+            "raw": ""something"",
+            "unicode": false,
+            "value": "something",
+          },
+          "byref": false,
+          "isStatic": false,
+          "kind": "arrowfunc",
+          "nullable": false,
+          "type": null,
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

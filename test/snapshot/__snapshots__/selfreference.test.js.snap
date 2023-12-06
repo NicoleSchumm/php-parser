@@ -1,0 +1,323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`selfreference argument (uppercase) 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "arg",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": SelfReference {
+            "kind": "selfreference",
+            "raw": "SELF",
+          },
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`selfreference argument 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "arg",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": SelfReference {
+            "kind": "selfreference",
+            "raw": "self",
+          },
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`selfreference call 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Call {
+        "arguments": [],
+        "kind": "call",
+        "what": StaticLookup {
+          "kind": "staticlookup",
+          "offset": Identifier {
+            "kind": "identifier",
+            "name": "call",
+          },
+          "what": SelfReference {
+            "kind": "selfreference",
+            "raw": "self",
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`selfreference constant 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": StaticLookup {
+        "kind": "staticlookup",
+        "offset": Identifier {
+          "kind": "identifier",
+          "name": "CONSTANT",
+        },
+        "what": SelfReference {
+          "kind": "selfreference",
+          "raw": "self",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`selfreference return static type declarations 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "arg",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": null,
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": false,
+      "type": TypeReference {
+        "kind": "typereference",
+        "name": "static",
+        "raw": "static",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`selfreference return type declarations (uppercase) 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "arg",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": null,
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": false,
+      "type": SelfReference {
+        "kind": "selfreference",
+        "raw": "SELF",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`selfreference return type declarations 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [
+        Parameter {
+          "attrGroups": [],
+          "byref": false,
+          "flags": 0,
+          "kind": "parameter",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "arg",
+          },
+          "nullable": false,
+          "readonly": false,
+          "type": null,
+          "value": null,
+          "variadic": false,
+        },
+      ],
+      "attrGroups": [],
+      "body": Block {
+        "children": [],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": false,
+      "type": SelfReference {
+        "kind": "selfreference",
+        "raw": "self",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`selfreference uppercase 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Call {
+        "arguments": [],
+        "kind": "call",
+        "what": StaticLookup {
+          "kind": "staticlookup",
+          "offset": Identifier {
+            "kind": "identifier",
+            "name": "call",
+          },
+          "what": SelfReference {
+            "kind": "selfreference",
+            "raw": "SELF",
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`selfreference variable 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": StaticLookup {
+        "kind": "staticlookup",
+        "offset": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "what": SelfReference {
+          "kind": "selfreference",
+          "raw": "self",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

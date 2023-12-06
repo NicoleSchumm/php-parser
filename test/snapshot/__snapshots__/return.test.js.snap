@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`return no expression 1`] = `
+Program {
+  "children": [
+    Return {
+      "expr": null,
+      "kind": "return",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`return should fail when no ';' at end 1`] = `
+Program {
+  "children": [
+    Return {
+      "expr": undefined,
+      "kind": "return",
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": "EXPR",
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error on line 1",
+      "token": "the end of file (EOF)",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`return simple 1`] = `
+Program {
+  "children": [
+    Return {
+      "expr": String {
+        "isDoubleQuote": true,
+        "kind": "string",
+        "raw": ""string"",
+        "unicode": false,
+        "value": "string",
+      },
+      "kind": "return",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

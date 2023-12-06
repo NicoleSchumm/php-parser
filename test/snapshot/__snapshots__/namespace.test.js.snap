@@ -1,0 +1,1637 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test namespace statements allow trailing comma for grouped namespaces #177 1`] = `
+Program {
+  "children": [
+    UseGroup {
+      "items": [
+        UseItem {
+          "alias": null,
+          "kind": "useitem",
+          "name": "Foo",
+          "type": null,
+        },
+        UseItem {
+          "alias": null,
+          "kind": "useitem",
+          "name": "Bar",
+          "type": null,
+        },
+        UseItem {
+          "alias": null,
+          "kind": "useitem",
+          "name": "Baz",
+          "type": null,
+        },
+      ],
+      "kind": "usegroup",
+      "name": "Foo\\Bar",
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test namespace statements check silent mode 1`] = `
+Program {
+  "children": [
+    Namespace {
+      "children": [
+        ExpressionStatement {
+          "expression": Assign {
+            "kind": "assign",
+            "left": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "var",
+            },
+            "operator": "=",
+            "right": Boolean {
+              "kind": "boolean",
+              "raw": "true",
+              "value": true,
+            },
+          },
+          "kind": "expressionstatement",
+        },
+      ],
+      "kind": "namespace",
+      "name": Name {
+        "kind": "name",
+        "name": "",
+        "resolution": "fqn",
+      },
+      "withBrackets": false,
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": 105,
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected '$var' (T_VARIABLE), expecting T_STRING on line 2",
+      "token": "'$var' (T_VARIABLE)",
+    },
+    Error {
+      "expected": [
+        "{",
+        ";",
+      ],
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected '$var' (T_VARIABLE) on line 2",
+      "token": "'$var' (T_VARIABLE)",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`Test namespace statements fix #246 - doesn't work properly for \`FULL_QUALIFIED_NAME\` 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "obj",
+        },
+        "operator": "=",
+        "right": New {
+          "arguments": [],
+          "kind": "new",
+          "what": Name {
+            "kind": "name",
+            "name": "\\Foo",
+            "resolution": "fqn",
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test namespace statements read usegroup location correctly with docs 1`] = `
+Program {
+  "children": [
+    Namespace {
+      "children": [
+        UseGroup {
+          "items": [
+            UseItem {
+              "alias": null,
+              "kind": "useitem",
+              "loc": Location {
+                "end": Position {
+                  "column": 25,
+                  "line": 4,
+                  "offset": 59,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 10,
+                  "line": 4,
+                  "offset": 44,
+                },
+              },
+              "name": "Some\\other\\test",
+              "type": null,
+            },
+          ],
+          "kind": "usegroup",
+          "loc": Location {
+            "end": Position {
+              "column": 25,
+              "line": 4,
+              "offset": 59,
+            },
+            "source": null,
+            "start": Position {
+              "column": 6,
+              "line": 4,
+              "offset": 40,
+            },
+          },
+          "name": null,
+          "type": null,
+        },
+        Class {
+          "attrGroups": [],
+          "body": [
+            PropertyStatement {
+              "isStatic": false,
+              "kind": "propertystatement",
+              "loc": Location {
+                "end": Position {
+                  "column": 20,
+                  "line": 10,
+                  "offset": 189,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 15,
+                  "line": 10,
+                  "offset": 184,
+                },
+              },
+              "properties": [
+                Property {
+                  "attrGroups": [],
+                  "kind": "property",
+                  "loc": Location {
+                    "end": Position {
+                      "column": 20,
+                      "line": 10,
+                      "offset": 189,
+                    },
+                    "source": null,
+                    "start": Position {
+                      "column": 15,
+                      "line": 10,
+                      "offset": 184,
+                    },
+                  },
+                  "name": Identifier {
+                    "kind": "identifier",
+                    "loc": Location {
+                      "end": Position {
+                        "column": 20,
+                        "line": 10,
+                        "offset": 189,
+                      },
+                      "source": null,
+                      "start": Position {
+                        "column": 15,
+                        "line": 10,
+                        "offset": 184,
+                      },
+                    },
+                    "name": "test",
+                  },
+                  "nullable": false,
+                  "readonly": false,
+                  "type": null,
+                  "value": null,
+                },
+              ],
+              "visibility": "public",
+            },
+            Method {
+              "arguments": [],
+              "attrGroups": [],
+              "body": Block {
+                "children": [
+                  Return {
+                    "expr": Boolean {
+                      "kind": "boolean",
+                      "loc": Location {
+                        "end": Position {
+                          "column": 21,
+                          "line": 13,
+                          "offset": 239,
+                        },
+                        "source": null,
+                        "start": Position {
+                          "column": 17,
+                          "line": 13,
+                          "offset": 235,
+                        },
+                      },
+                      "raw": "true",
+                      "value": true,
+                    },
+                    "kind": "return",
+                    "loc": Location {
+                      "end": Position {
+                        "column": 22,
+                        "line": 13,
+                        "offset": 240,
+                      },
+                      "source": null,
+                      "start": Position {
+                        "column": 10,
+                        "line": 13,
+                        "offset": 228,
+                      },
+                    },
+                  },
+                ],
+                "kind": "block",
+                "loc": Location {
+                  "end": Position {
+                    "column": 9,
+                    "line": 14,
+                    "offset": 250,
+                  },
+                  "source": null,
+                  "start": Position {
+                    "column": 24,
+                    "line": 12,
+                    "offset": 216,
+                  },
+                },
+              },
+              "byref": false,
+              "isAbstract": false,
+              "isFinal": false,
+              "isReadonly": false,
+              "isStatic": false,
+              "kind": "method",
+              "loc": Location {
+                "end": Position {
+                  "column": 9,
+                  "line": 14,
+                  "offset": 250,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 8,
+                  "line": 12,
+                  "offset": 200,
+                },
+              },
+              "name": Identifier {
+                "kind": "identifier",
+                "loc": Location {
+                  "end": Position {
+                    "column": 21,
+                    "line": 12,
+                    "offset": 213,
+                  },
+                  "source": null,
+                  "start": Position {
+                    "column": 17,
+                    "line": 12,
+                    "offset": 209,
+                  },
+                },
+                "name": "test",
+              },
+              "nullable": false,
+              "type": null,
+              "visibility": "",
+            },
+            Method {
+              "arguments": [],
+              "attrGroups": [],
+              "body": Block {
+                "children": [
+                  ExpressionStatement {
+                    "expression": Assign {
+                      "kind": "assign",
+                      "left": Variable {
+                        "curly": false,
+                        "kind": "variable",
+                        "loc": Location {
+                          "end": Position {
+                            "column": 12,
+                            "line": 17,
+                            "offset": 313,
+                          },
+                          "source": null,
+                          "start": Position {
+                            "column": 10,
+                            "line": 17,
+                            "offset": 311,
+                          },
+                        },
+                        "name": "a",
+                      },
+                      "loc": Location {
+                        "end": Position {
+                          "column": 17,
+                          "line": 17,
+                          "offset": 318,
+                        },
+                        "source": null,
+                        "start": Position {
+                          "column": 10,
+                          "line": 17,
+                          "offset": 311,
+                        },
+                      },
+                      "operator": "=",
+                      "right": Number {
+                        "kind": "number",
+                        "loc": Location {
+                          "end": Position {
+                            "column": 16,
+                            "line": 17,
+                            "offset": 317,
+                          },
+                          "source": null,
+                          "start": Position {
+                            "column": 15,
+                            "line": 17,
+                            "offset": 316,
+                          },
+                        },
+                        "value": "1",
+                      },
+                    },
+                    "kind": "expressionstatement",
+                    "loc": Location {
+                      "end": Position {
+                        "column": 17,
+                        "line": 17,
+                        "offset": 318,
+                      },
+                      "source": null,
+                      "start": Position {
+                        "column": 10,
+                        "line": 17,
+                        "offset": 311,
+                      },
+                    },
+                  },
+                  Return {
+                    "expr": Variable {
+                      "curly": false,
+                      "kind": "variable",
+                      "loc": Location {
+                        "end": Position {
+                          "column": 19,
+                          "line": 18,
+                          "offset": 338,
+                        },
+                        "source": null,
+                        "start": Position {
+                          "column": 17,
+                          "line": 18,
+                          "offset": 336,
+                        },
+                      },
+                      "name": "a",
+                    },
+                    "kind": "return",
+                    "loc": Location {
+                      "end": Position {
+                        "column": 20,
+                        "line": 18,
+                        "offset": 339,
+                      },
+                      "source": null,
+                      "start": Position {
+                        "column": 10,
+                        "line": 18,
+                        "offset": 329,
+                      },
+                    },
+                  },
+                ],
+                "kind": "block",
+                "loc": Location {
+                  "end": Position {
+                    "column": 9,
+                    "line": 19,
+                    "offset": 349,
+                  },
+                  "source": null,
+                  "start": Position {
+                    "column": 47,
+                    "line": 16,
+                    "offset": 299,
+                  },
+                },
+              },
+              "byref": true,
+              "isAbstract": false,
+              "isFinal": false,
+              "isReadonly": false,
+              "isStatic": false,
+              "kind": "method",
+              "loc": Location {
+                "end": Position {
+                  "column": 9,
+                  "line": 19,
+                  "offset": 349,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 8,
+                  "line": 16,
+                  "offset": 260,
+                },
+              },
+              "name": Identifier {
+                "kind": "identifier",
+                "loc": Location {
+                  "end": Position {
+                    "column": 44,
+                    "line": 16,
+                    "offset": 296,
+                  },
+                  "source": null,
+                  "start": Position {
+                    "column": 25,
+                    "line": 16,
+                    "offset": 277,
+                  },
+                },
+                "name": "passByReferenceTest",
+              },
+              "nullable": false,
+              "type": null,
+              "visibility": "public",
+            },
+          ],
+          "extends": Name {
+            "kind": "name",
+            "loc": Location {
+              "end": Position {
+                "column": 27,
+                "line": 9,
+                "offset": 145,
+              },
+              "source": null,
+              "start": Position {
+                "column": 24,
+                "line": 9,
+                "offset": 142,
+              },
+            },
+            "name": "Bar",
+            "resolution": "uqn",
+          },
+          "implements": [
+            Name {
+              "kind": "name",
+              "loc": Location {
+                "end": Position {
+                  "column": 42,
+                  "line": 9,
+                  "offset": 160,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 39,
+                  "line": 9,
+                  "offset": 157,
+                },
+              },
+              "name": "Baz",
+              "resolution": "uqn",
+            },
+            Name {
+              "kind": "name",
+              "loc": Location {
+                "end": Position {
+                  "column": 48,
+                  "line": 9,
+                  "offset": 166,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 44,
+                  "line": 9,
+                  "offset": 162,
+                },
+              },
+              "name": "Buzz",
+              "resolution": "uqn",
+            },
+          ],
+          "isAbstract": false,
+          "isAnonymous": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "kind": "class",
+          "leadingComments": [
+            CommentBlock {
+              "kind": "commentblock",
+              "loc": Location {
+                "end": Position {
+                  "column": 9,
+                  "line": 8,
+                  "offset": 117,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 6,
+                  "line": 6,
+                  "offset": 68,
+                },
+              },
+              "offset": 68,
+              "value": "/**
+       * @property \\Test\\test $test
+       */",
+            },
+          ],
+          "loc": Location {
+            "end": Position {
+              "column": 7,
+              "line": 20,
+              "offset": 357,
+            },
+            "source": null,
+            "start": Position {
+              "column": 6,
+              "line": 9,
+              "offset": 124,
+            },
+          },
+          "name": Identifier {
+            "kind": "identifier",
+            "loc": Location {
+              "end": Position {
+                "column": 15,
+                "line": 9,
+                "offset": 133,
+              },
+              "source": null,
+              "start": Position {
+                "column": 12,
+                "line": 9,
+                "offset": 130,
+              },
+            },
+            "name": "Foo",
+          },
+        },
+      ],
+      "kind": "namespace",
+      "loc": Location {
+        "end": Position {
+          "column": 7,
+          "line": 20,
+          "offset": 357,
+        },
+        "source": null,
+        "start": Position {
+          "column": 6,
+          "line": 2,
+          "offset": 7,
+        },
+      },
+      "name": "Test\\test\\test",
+      "withBrackets": false,
+    },
+  ],
+  "comments": [
+    CommentBlock {
+      "kind": "commentblock",
+      "loc": Location {
+        "end": Position {
+          "column": 9,
+          "line": 8,
+          "offset": 117,
+        },
+        "source": null,
+        "start": Position {
+          "column": 6,
+          "line": 6,
+          "offset": 68,
+        },
+      },
+      "offset": 68,
+      "value": "/**
+       * @property \\Test\\test $test
+       */",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+  "loc": Location {
+    "end": Position {
+      "column": 4,
+      "line": 21,
+      "offset": 362,
+    },
+    "source": null,
+    "start": Position {
+      "column": 0,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+}
+`;
+
+exports[`Test namespace statements read usegroup location correctly without docs 1`] = `
+Program {
+  "children": [
+    Namespace {
+      "children": [
+        UseGroup {
+          "items": [
+            UseItem {
+              "alias": null,
+              "kind": "useitem",
+              "loc": Location {
+                "end": Position {
+                  "column": 25,
+                  "line": 4,
+                  "offset": 59,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 10,
+                  "line": 4,
+                  "offset": 44,
+                },
+              },
+              "name": "Some\\other\\test",
+              "type": null,
+            },
+          ],
+          "kind": "usegroup",
+          "loc": Location {
+            "end": Position {
+              "column": 25,
+              "line": 4,
+              "offset": 59,
+            },
+            "source": null,
+            "start": Position {
+              "column": 6,
+              "line": 4,
+              "offset": 40,
+            },
+          },
+          "name": null,
+          "type": null,
+        },
+        Class {
+          "attrGroups": [],
+          "body": [
+            PropertyStatement {
+              "isStatic": false,
+              "kind": "propertystatement",
+              "loc": Location {
+                "end": Position {
+                  "column": 20,
+                  "line": 10,
+                  "offset": 189,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 15,
+                  "line": 10,
+                  "offset": 184,
+                },
+              },
+              "properties": [
+                Property {
+                  "attrGroups": [],
+                  "kind": "property",
+                  "loc": Location {
+                    "end": Position {
+                      "column": 20,
+                      "line": 10,
+                      "offset": 189,
+                    },
+                    "source": null,
+                    "start": Position {
+                      "column": 15,
+                      "line": 10,
+                      "offset": 184,
+                    },
+                  },
+                  "name": Identifier {
+                    "kind": "identifier",
+                    "loc": Location {
+                      "end": Position {
+                        "column": 20,
+                        "line": 10,
+                        "offset": 189,
+                      },
+                      "source": null,
+                      "start": Position {
+                        "column": 15,
+                        "line": 10,
+                        "offset": 184,
+                      },
+                    },
+                    "name": "test",
+                  },
+                  "nullable": false,
+                  "readonly": false,
+                  "type": null,
+                  "value": null,
+                },
+              ],
+              "visibility": "public",
+            },
+            Method {
+              "arguments": [],
+              "attrGroups": [],
+              "body": Block {
+                "children": [
+                  Return {
+                    "expr": Boolean {
+                      "kind": "boolean",
+                      "loc": Location {
+                        "end": Position {
+                          "column": 21,
+                          "line": 13,
+                          "offset": 239,
+                        },
+                        "source": null,
+                        "start": Position {
+                          "column": 17,
+                          "line": 13,
+                          "offset": 235,
+                        },
+                      },
+                      "raw": "true",
+                      "value": true,
+                    },
+                    "kind": "return",
+                    "loc": Location {
+                      "end": Position {
+                        "column": 22,
+                        "line": 13,
+                        "offset": 240,
+                      },
+                      "source": null,
+                      "start": Position {
+                        "column": 10,
+                        "line": 13,
+                        "offset": 228,
+                      },
+                    },
+                  },
+                ],
+                "kind": "block",
+                "loc": Location {
+                  "end": Position {
+                    "column": 9,
+                    "line": 14,
+                    "offset": 250,
+                  },
+                  "source": null,
+                  "start": Position {
+                    "column": 24,
+                    "line": 12,
+                    "offset": 216,
+                  },
+                },
+              },
+              "byref": false,
+              "isAbstract": false,
+              "isFinal": false,
+              "isReadonly": false,
+              "isStatic": false,
+              "kind": "method",
+              "loc": Location {
+                "end": Position {
+                  "column": 9,
+                  "line": 14,
+                  "offset": 250,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 8,
+                  "line": 12,
+                  "offset": 200,
+                },
+              },
+              "name": Identifier {
+                "kind": "identifier",
+                "loc": Location {
+                  "end": Position {
+                    "column": 21,
+                    "line": 12,
+                    "offset": 213,
+                  },
+                  "source": null,
+                  "start": Position {
+                    "column": 17,
+                    "line": 12,
+                    "offset": 209,
+                  },
+                },
+                "name": "test",
+              },
+              "nullable": false,
+              "type": null,
+              "visibility": "",
+            },
+            Method {
+              "arguments": [],
+              "attrGroups": [],
+              "body": Block {
+                "children": [
+                  ExpressionStatement {
+                    "expression": Assign {
+                      "kind": "assign",
+                      "left": Variable {
+                        "curly": false,
+                        "kind": "variable",
+                        "loc": Location {
+                          "end": Position {
+                            "column": 12,
+                            "line": 17,
+                            "offset": 313,
+                          },
+                          "source": null,
+                          "start": Position {
+                            "column": 10,
+                            "line": 17,
+                            "offset": 311,
+                          },
+                        },
+                        "name": "a",
+                      },
+                      "loc": Location {
+                        "end": Position {
+                          "column": 17,
+                          "line": 17,
+                          "offset": 318,
+                        },
+                        "source": null,
+                        "start": Position {
+                          "column": 10,
+                          "line": 17,
+                          "offset": 311,
+                        },
+                      },
+                      "operator": "=",
+                      "right": Number {
+                        "kind": "number",
+                        "loc": Location {
+                          "end": Position {
+                            "column": 16,
+                            "line": 17,
+                            "offset": 317,
+                          },
+                          "source": null,
+                          "start": Position {
+                            "column": 15,
+                            "line": 17,
+                            "offset": 316,
+                          },
+                        },
+                        "value": "1",
+                      },
+                    },
+                    "kind": "expressionstatement",
+                    "loc": Location {
+                      "end": Position {
+                        "column": 17,
+                        "line": 17,
+                        "offset": 318,
+                      },
+                      "source": null,
+                      "start": Position {
+                        "column": 10,
+                        "line": 17,
+                        "offset": 311,
+                      },
+                    },
+                  },
+                  Return {
+                    "expr": Variable {
+                      "curly": false,
+                      "kind": "variable",
+                      "loc": Location {
+                        "end": Position {
+                          "column": 19,
+                          "line": 18,
+                          "offset": 338,
+                        },
+                        "source": null,
+                        "start": Position {
+                          "column": 17,
+                          "line": 18,
+                          "offset": 336,
+                        },
+                      },
+                      "name": "a",
+                    },
+                    "kind": "return",
+                    "loc": Location {
+                      "end": Position {
+                        "column": 20,
+                        "line": 18,
+                        "offset": 339,
+                      },
+                      "source": null,
+                      "start": Position {
+                        "column": 10,
+                        "line": 18,
+                        "offset": 329,
+                      },
+                    },
+                  },
+                ],
+                "kind": "block",
+                "loc": Location {
+                  "end": Position {
+                    "column": 9,
+                    "line": 19,
+                    "offset": 349,
+                  },
+                  "source": null,
+                  "start": Position {
+                    "column": 47,
+                    "line": 16,
+                    "offset": 299,
+                  },
+                },
+              },
+              "byref": true,
+              "isAbstract": false,
+              "isFinal": false,
+              "isReadonly": false,
+              "isStatic": false,
+              "kind": "method",
+              "loc": Location {
+                "end": Position {
+                  "column": 9,
+                  "line": 19,
+                  "offset": 349,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 8,
+                  "line": 16,
+                  "offset": 260,
+                },
+              },
+              "name": Identifier {
+                "kind": "identifier",
+                "loc": Location {
+                  "end": Position {
+                    "column": 44,
+                    "line": 16,
+                    "offset": 296,
+                  },
+                  "source": null,
+                  "start": Position {
+                    "column": 25,
+                    "line": 16,
+                    "offset": 277,
+                  },
+                },
+                "name": "passByReferenceTest",
+              },
+              "nullable": false,
+              "type": null,
+              "visibility": "public",
+            },
+          ],
+          "extends": Name {
+            "kind": "name",
+            "loc": Location {
+              "end": Position {
+                "column": 27,
+                "line": 9,
+                "offset": 145,
+              },
+              "source": null,
+              "start": Position {
+                "column": 24,
+                "line": 9,
+                "offset": 142,
+              },
+            },
+            "name": "Bar",
+            "resolution": "uqn",
+          },
+          "implements": [
+            Name {
+              "kind": "name",
+              "loc": Location {
+                "end": Position {
+                  "column": 42,
+                  "line": 9,
+                  "offset": 160,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 39,
+                  "line": 9,
+                  "offset": 157,
+                },
+              },
+              "name": "Baz",
+              "resolution": "uqn",
+            },
+            Name {
+              "kind": "name",
+              "loc": Location {
+                "end": Position {
+                  "column": 48,
+                  "line": 9,
+                  "offset": 166,
+                },
+                "source": null,
+                "start": Position {
+                  "column": 44,
+                  "line": 9,
+                  "offset": 162,
+                },
+              },
+              "name": "Buzz",
+              "resolution": "uqn",
+            },
+          ],
+          "isAbstract": false,
+          "isAnonymous": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "kind": "class",
+          "loc": Location {
+            "end": Position {
+              "column": 7,
+              "line": 20,
+              "offset": 357,
+            },
+            "source": null,
+            "start": Position {
+              "column": 6,
+              "line": 9,
+              "offset": 124,
+            },
+          },
+          "name": Identifier {
+            "kind": "identifier",
+            "loc": Location {
+              "end": Position {
+                "column": 15,
+                "line": 9,
+                "offset": 133,
+              },
+              "source": null,
+              "start": Position {
+                "column": 12,
+                "line": 9,
+                "offset": 130,
+              },
+            },
+            "name": "Foo",
+          },
+        },
+      ],
+      "kind": "namespace",
+      "loc": Location {
+        "end": Position {
+          "column": 7,
+          "line": 20,
+          "offset": 357,
+        },
+        "source": null,
+        "start": Position {
+          "column": 6,
+          "line": 2,
+          "offset": 7,
+        },
+      },
+      "name": "Test\\test\\test",
+      "withBrackets": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+  "loc": Location {
+    "end": Position {
+      "column": 4,
+      "line": 21,
+      "offset": 362,
+    },
+    "source": null,
+    "start": Position {
+      "column": 0,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+}
+`;
+
+exports[`Test namespace statements test bare namespace separator 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Error {
+        "expected": "SCALAR",
+        "kind": "error",
+        "line": 1,
+        "message": "Parse Error : syntax error, unexpected '\\' (T_NS_SEPARATOR) on line 1",
+        "token": "'\\' (T_NS_SEPARATOR)",
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": "SCALAR",
+      "kind": "error",
+      "line": 1,
+      "message": "Parse Error : syntax error, unexpected '\\' (T_NS_SEPARATOR) on line 1",
+      "token": "'\\' (T_NS_SEPARATOR)",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`Test namespace statements test keywords 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Call {
+        "arguments": [],
+        "kind": "call",
+        "what": Name {
+          "kind": "name",
+          "name": "enum",
+          "resolution": "rn",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+    ExpressionStatement {
+      "expression": Call {
+        "arguments": [],
+        "kind": "call",
+        "what": Name {
+          "kind": "name",
+          "name": "\\foo\\trait\\class",
+          "resolution": "fqn",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+    UseGroup {
+      "items": [
+        UseItem {
+          "alias": null,
+          "kind": "useitem",
+          "name": "a",
+          "type": null,
+        },
+        UseItem {
+          "alias": null,
+          "kind": "useitem",
+          "name": "b",
+          "type": null,
+        },
+      ],
+      "kind": "usegroup",
+      "name": "\\foo\\bar",
+      "type": null,
+    },
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Name {
+          "kind": "name",
+          "name": "bar",
+          "resolution": "rn",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test namespace statements test multiple namespace 1`] = `
+Program {
+  "children": [
+    Namespace {
+      "children": [
+        ExpressionStatement {
+          "expression": Post {
+            "kind": "post",
+            "type": "+",
+            "what": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "i",
+            },
+          },
+          "kind": "expressionstatement",
+        },
+      ],
+      "kind": "namespace",
+      "name": "\\foo",
+      "withBrackets": true,
+    },
+    Namespace {
+      "children": [
+        ExpressionStatement {
+          "expression": Post {
+            "kind": "post",
+            "type": "+",
+            "what": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "b",
+            },
+          },
+          "kind": "expressionstatement",
+        },
+      ],
+      "kind": "namespace",
+      "name": [
+        "",
+      ],
+      "withBrackets": true,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test namespace statements test namespace error 1`] = `
+Program {
+  "children": [
+    Namespace {
+      "children": [
+        ExpressionStatement {
+          "expression": Assign {
+            "kind": "assign",
+            "left": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "var",
+            },
+            "operator": "=",
+            "right": Boolean {
+              "kind": "boolean",
+              "raw": "true",
+              "value": true,
+            },
+          },
+          "kind": "expressionstatement",
+        },
+      ],
+      "kind": "namespace",
+      "name": Name {
+        "kind": "name",
+        "name": "",
+        "resolution": "fqn",
+      },
+      "withBrackets": false,
+    },
+  ],
+  "errors": [
+    Error {
+      "expected": 105,
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected '$var' (T_VARIABLE), expecting T_STRING on line 2",
+      "token": "'$var' (T_VARIABLE)",
+    },
+    Error {
+      "expected": [
+        "{",
+        ";",
+      ],
+      "kind": "error",
+      "line": 2,
+      "message": "Parse Error : syntax error, unexpected '$var' (T_VARIABLE) on line 2",
+      "token": "'$var' (T_VARIABLE)",
+    },
+  ],
+  "kind": "program",
+}
+`;
+
+exports[`Test namespace statements test namespace keyword 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Call {
+        "arguments": [],
+        "kind": "call",
+        "what": Name {
+          "kind": "name",
+          "name": "foo",
+          "resolution": "rn",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "var",
+        },
+        "operator": "=",
+        "right": Name {
+          "kind": "name",
+          "name": "bar",
+          "resolution": "rn",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test namespace statements test single namespace 1`] = `
+Program {
+  "children": [
+    Namespace {
+      "children": [
+        UseGroup {
+          "items": [
+            UseItem {
+              "alias": Identifier {
+                "kind": "identifier",
+                "name": "barBaz",
+              },
+              "kind": "useitem",
+              "name": "bar\\baz",
+              "type": null,
+            },
+          ],
+          "kind": "usegroup",
+          "name": null,
+          "type": null,
+        },
+        UseGroup {
+          "items": [
+            UseItem {
+              "alias": Identifier {
+                "kind": "identifier",
+                "name": "barBaz",
+              },
+              "kind": "useitem",
+              "name": "bar\\baz",
+              "type": null,
+            },
+            UseItem {
+              "alias": Identifier {
+                "kind": "identifier",
+                "name": "bazBoo",
+              },
+              "kind": "useitem",
+              "name": "baz\\boo",
+              "type": null,
+            },
+          ],
+          "kind": "usegroup",
+          "name": null,
+          "type": "const",
+        },
+        UseGroup {
+          "items": [
+            UseItem {
+              "alias": Identifier {
+                "kind": "identifier",
+                "name": "barBaz",
+              },
+              "kind": "useitem",
+              "name": "bar\\baz",
+              "type": null,
+            },
+            UseItem {
+              "alias": Identifier {
+                "kind": "identifier",
+                "name": "bazBoo",
+              },
+              "kind": "useitem",
+              "name": "baz\\boo",
+              "type": null,
+            },
+          ],
+          "kind": "usegroup",
+          "name": null,
+          "type": "function",
+        },
+        UseGroup {
+          "items": [
+            UseItem {
+              "alias": Identifier {
+                "kind": "identifier",
+                "name": "BAZ_FOO",
+              },
+              "kind": "useitem",
+              "name": "FOO",
+              "type": "const",
+            },
+            UseItem {
+              "alias": Identifier {
+                "kind": "identifier",
+                "name": "BAZ_BOO",
+              },
+              "kind": "useitem",
+              "name": "BOO",
+              "type": "function",
+            },
+          ],
+          "kind": "usegroup",
+          "name": "bar\\baz",
+          "type": null,
+        },
+        UseGroup {
+          "items": [
+            UseItem {
+              "alias": Identifier {
+                "kind": "identifier",
+                "name": "AZERTY_A",
+              },
+              "kind": "useitem",
+              "name": "A",
+              "type": null,
+            },
+            UseItem {
+              "alias": Identifier {
+                "kind": "identifier",
+                "name": "AZERTY_B",
+              },
+              "kind": "useitem",
+              "name": "B",
+              "type": null,
+            },
+          ],
+          "kind": "usegroup",
+          "name": "azerty",
+          "type": "const",
+        },
+        ExpressionStatement {
+          "expression": Assign {
+            "kind": "assign",
+            "left": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "a",
+            },
+            "operator": "=",
+            "right": Name {
+              "kind": "name",
+              "name": "barBaz",
+              "resolution": "rn",
+            },
+          },
+          "kind": "expressionstatement",
+        },
+        ExpressionStatement {
+          "expression": Assign {
+            "kind": "assign",
+            "left": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "b",
+            },
+            "operator": "=",
+            "right": Name {
+              "kind": "name",
+              "name": "\\barBaz",
+              "resolution": "fqn",
+            },
+          },
+          "kind": "expressionstatement",
+        },
+        ExpressionStatement {
+          "expression": Assign {
+            "kind": "assign",
+            "left": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "c",
+            },
+            "operator": "=",
+            "right": Name {
+              "kind": "name",
+              "name": "barBaz\\foo",
+              "resolution": "qn",
+            },
+          },
+          "kind": "expressionstatement",
+        },
+        ExpressionStatement {
+          "expression": Assign {
+            "kind": "assign",
+            "left": Variable {
+              "curly": false,
+              "kind": "variable",
+              "name": "d",
+            },
+            "operator": "=",
+            "right": Name {
+              "kind": "name",
+              "name": "barBaz",
+              "resolution": "uqn",
+            },
+          },
+          "kind": "expressionstatement",
+        },
+      ],
+      "kind": "namespace",
+      "name": "foo",
+      "withBrackets": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`Test namespace statements work with declare statement 1`] = `
+Program {
+  "children": [
+    Declare {
+      "children": [],
+      "directives": [
+        DeclareDirective {
+          "key": Identifier {
+            "kind": "identifier",
+            "name": "strict_types",
+          },
+          "kind": "declaredirective",
+          "value": Number {
+            "kind": "number",
+            "value": "1",
+          },
+        },
+      ],
+      "kind": "declare",
+      "mode": "none",
+    },
+    Namespace {
+      "children": [
+        Class {
+          "attrGroups": [],
+          "body": [],
+          "extends": null,
+          "implements": null,
+          "isAbstract": false,
+          "isAnonymous": false,
+          "isFinal": false,
+          "isReadonly": false,
+          "kind": "class",
+          "name": Identifier {
+            "kind": "identifier",
+            "name": "bar",
+          },
+        },
+      ],
+      "kind": "namespace",
+      "name": "foo",
+      "withBrackets": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

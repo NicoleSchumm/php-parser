@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`eval simple 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Eval {
+        "kind": "eval",
+        "source": String {
+          "isDoubleQuote": true,
+          "kind": "string",
+          "raw": ""command"",
+          "unicode": false,
+          "value": "command",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

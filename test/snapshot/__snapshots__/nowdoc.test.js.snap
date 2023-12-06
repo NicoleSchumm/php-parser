@@ -1,0 +1,471 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nowdoc Flexible nowdoc syntax: 4 spaces of indentation 1`] = `
+Program {
+  "children": [
+    Echo {
+      "expressions": [
+        Nowdoc {
+          "kind": "nowdoc",
+          "label": "END",
+          "raw": "<<<'END'
+      a
+     b
+    c
+    END",
+          "value": "  a
+ b
+c",
+        },
+      ],
+      "kind": "echo",
+      "shortForm": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nowdoc Flexible nowdoc syntax: with variables 1`] = `
+Program {
+  "children": [
+    Echo {
+      "expressions": [
+        Nowdoc {
+          "kind": "nowdoc",
+          "label": "END",
+          "raw": "<<<'END'
+      a
+      {$foo->bar[1]}
+     b
+    c
+    END",
+          "value": "  a
+  {$foo->bar[1]}
+ b
+c",
+        },
+      ],
+      "kind": "echo",
+      "shortForm": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nowdoc Followed by string interpolation 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "x",
+        },
+        "operator": "=",
+        "right": Nowdoc {
+          "kind": "nowdoc",
+          "label": "NOWDOC",
+          "raw": "<<<'NOWDOC'
+      ...
+      NOWDOC",
+          "value": "...",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+    ExpressionStatement {
+      "expression": Assign {
+        "kind": "assign",
+        "left": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "y",
+        },
+        "operator": "=",
+        "right": Encapsed {
+          "kind": "encapsed",
+          "raw": ""_$z"",
+          "type": "string",
+          "value": [
+            EncapsedPart {
+              "curly": false,
+              "expression": String {
+                "isDoubleQuote": false,
+                "kind": "string",
+                "raw": "_",
+                "unicode": false,
+                "value": "_",
+              },
+              "kind": "encapsedpart",
+              "syntax": null,
+            },
+            EncapsedPart {
+              "curly": false,
+              "expression": Variable {
+                "curly": false,
+                "kind": "variable",
+                "name": "z",
+              },
+              "kind": "encapsedpart",
+              "syntax": "simple",
+            },
+          ],
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nowdoc empty 1`] = `
+Program {
+  "children": [
+    Echo {
+      "expressions": [
+        Nowdoc {
+          "kind": "nowdoc",
+          "label": "TEST",
+          "raw": "<<<'TEST'
+TEST",
+          "value": "",
+        },
+      ],
+      "kind": "echo",
+      "shortForm": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nowdoc inside call 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Call {
+        "arguments": [
+          Array {
+            "items": [
+              Entry {
+                "byRef": false,
+                "key": null,
+                "kind": "entry",
+                "unpack": false,
+                "value": Nowdoc {
+                  "kind": "nowdoc",
+                  "label": "EOD",
+                  "raw": "<<<'EOD'
+foobar!
+EOD
+",
+                  "value": "foobar!",
+                },
+              },
+            ],
+            "kind": "array",
+            "shortForm": false,
+          },
+        ],
+        "kind": "call",
+        "what": Name {
+          "kind": "name",
+          "name": "var_dump",
+          "resolution": "uqn",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nowdoc inside class 1`] = `
+Program {
+  "children": [
+    Class {
+      "attrGroups": [],
+      "body": [
+        ClassConstant {
+          "attrGroups": [],
+          "constants": [
+            Constant {
+              "kind": "constant",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "BAR",
+              },
+              "value": Nowdoc {
+                "kind": "nowdoc",
+                "label": "FOOBAR",
+                "raw": "<<<'FOOBAR'
+Constant example
+FOOBAR",
+                "value": "Constant example",
+              },
+            },
+          ],
+          "final": false,
+          "kind": "classconstant",
+          "visibility": "",
+        },
+        PropertyStatement {
+          "isStatic": false,
+          "kind": "propertystatement",
+          "properties": [
+            Property {
+              "attrGroups": [],
+              "kind": "property",
+              "name": Identifier {
+                "kind": "identifier",
+                "name": "baz",
+              },
+              "nullable": false,
+              "readonly": false,
+              "type": null,
+              "value": Nowdoc {
+                "kind": "nowdoc",
+                "label": "FOOBAR",
+                "raw": "<<<'FOOBAR'
+Property example
+FOOBAR",
+                "value": "Property example",
+              },
+            },
+          ],
+          "visibility": "public",
+        },
+      ],
+      "extends": null,
+      "implements": null,
+      "isAbstract": false,
+      "isAnonymous": false,
+      "isFinal": false,
+      "isReadonly": false,
+      "kind": "class",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nowdoc inside function 1`] = `
+Program {
+  "children": [
+    _Function {
+      "arguments": [],
+      "attrGroups": [],
+      "body": Block {
+        "children": [
+          Static {
+            "kind": "static",
+            "variables": [
+              StaticVariable {
+                "defaultValue": Nowdoc {
+                  "kind": "nowdoc",
+                  "label": "LABEL",
+                  "raw": "<<<'LABEL'
+Nothing in here...
+LABEL",
+                  "value": "Nothing in here...",
+                },
+                "kind": "staticvariable",
+                "variable": Variable {
+                  "curly": false,
+                  "kind": "variable",
+                  "name": "bar",
+                },
+              },
+            ],
+          },
+        ],
+        "kind": "block",
+      },
+      "byref": false,
+      "kind": "function",
+      "name": Identifier {
+        "kind": "identifier",
+        "name": "foo",
+      },
+      "nullable": false,
+      "type": null,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nowdoc only newline 1`] = `
+Program {
+  "children": [
+    Echo {
+      "expressions": [
+        Nowdoc {
+          "kind": "nowdoc",
+          "label": "TEST",
+          "raw": "<<<'TEST'
+
+TEST",
+          "value": "",
+        },
+      ],
+      "kind": "echo",
+      "shortForm": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nowdoc simple 1`] = `
+Program {
+  "children": [
+    Echo {
+      "expressions": [
+        Nowdoc {
+          "kind": "nowdoc",
+          "label": "EOD",
+          "raw": "<<<'EOD'
+Example of string
+spanning multiple lines
+using heredoc syntax.
+EOD",
+          "value": "Example of string
+spanning multiple lines
+using heredoc syntax.",
+        },
+      ],
+      "kind": "echo",
+      "shortForm": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nowdoc space between <<< and label 1`] = `
+Program {
+  "children": [
+    Echo {
+      "expressions": [
+        Nowdoc {
+          "kind": "nowdoc",
+          "label": "TEST",
+          "raw": "<<<   'TEST'
+  a
+ b
+c
+TEST",
+          "value": "  a
+ b
+c",
+        },
+      ],
+      "kind": "echo",
+      "shortForm": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nowdoc tab between <<< and label 1`] = `
+Program {
+  "children": [
+    Echo {
+      "expressions": [
+        Nowdoc {
+          "kind": "nowdoc",
+          "label": "TEST",
+          "raw": "<<<	'TEST'
+  a
+ b
+c
+TEST",
+          "value": "  a
+ b
+c",
+        },
+      ],
+      "kind": "echo",
+      "shortForm": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nowdoc with space between <<< and label 1`] = `
+Program {
+  "children": [
+    Echo {
+      "expressions": [
+        Nowdoc {
+          "kind": "nowdoc",
+          "label": "EOD",
+          "raw": "<<<     'EOD'
+Example of string
+spanning multiple lines
+using heredoc syntax.
+EOD",
+          "value": "Example of string
+spanning multiple lines
+using heredoc syntax.",
+        },
+      ],
+      "kind": "echo",
+      "shortForm": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nowdoc with variables 1`] = `
+Program {
+  "children": [
+    Echo {
+      "expressions": [
+        Nowdoc {
+          "kind": "nowdoc",
+          "label": "EOT",
+          "raw": "<<<'EOT'
+My name is "$name". I am printing some $foo->foo.
+Now, I am printing some {$foo->bar[1]}.
+This should print a capital 'A': A
+EOT",
+          "value": "My name is "$name". I am printing some $foo->foo.
+Now, I am printing some {$foo->bar[1]}.
+This should print a capital 'A': A",
+        },
+      ],
+      "kind": "echo",
+      "shortForm": false,
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;

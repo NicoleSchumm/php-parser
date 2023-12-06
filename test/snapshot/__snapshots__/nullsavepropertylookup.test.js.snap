@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nullsavepropertylookup call 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": Call {
+        "arguments": [],
+        "kind": "call",
+        "what": NullSafePropertyLookup {
+          "kind": "nullsafepropertylookup",
+          "offset": Identifier {
+            "kind": "identifier",
+            "name": "call",
+          },
+          "what": Variable {
+            "curly": false,
+            "kind": "variable",
+            "name": "obj",
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nullsavepropertylookup multiple 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": NullSafePropertyLookup {
+        "kind": "nullsafepropertylookup",
+        "offset": Identifier {
+          "kind": "identifier",
+          "name": "property_2",
+        },
+        "what": NullSafePropertyLookup {
+          "kind": "nullsafepropertylookup",
+          "offset": Identifier {
+            "kind": "identifier",
+            "name": "property_1",
+          },
+          "what": Variable {
+            "curly": false,
+            "kind": "variable",
+            "name": "obj",
+          },
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nullsavepropertylookup simple 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": NullSafePropertyLookup {
+        "kind": "nullsafepropertylookup",
+        "offset": Identifier {
+          "kind": "identifier",
+          "name": "property",
+        },
+        "what": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "obj",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
+
+exports[`nullsavepropertylookup variable 1`] = `
+Program {
+  "children": [
+    ExpressionStatement {
+      "expression": NullSafePropertyLookup {
+        "kind": "nullsafepropertylookup",
+        "offset": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "property",
+        },
+        "what": Variable {
+          "curly": false,
+          "kind": "variable",
+          "name": "obj",
+        },
+      },
+      "kind": "expressionstatement",
+    },
+  ],
+  "errors": [],
+  "kind": "program",
+}
+`;
